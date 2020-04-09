@@ -15,7 +15,7 @@ Prerequisites:
 Structure of the code
 Package
     - Api 
-        - web (CONTROLLER)
+        - controller
         - repository (REPOSITORY)
         - model (MODEL, ENTITY, CUSTOM VALIDATE & UTILS)
         - service (LOGIC BUSSINES)
