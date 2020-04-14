@@ -38,6 +38,7 @@ import javax.crypto.spec.SecretKeySpec;
 
 @CybersourceAnnotation
 public class Cybersource {
+	//private static Logger LOG = LoggerFactory.getLogger(TwoFactorAuthenticationApplication.class);
 	
 	@Autowired
 	private PropertySettings propertySettings;
@@ -80,7 +81,7 @@ public class Cybersource {
 		            .setIssuer(apiIdentifier)
 		            .claim("OrgUnitId", orgUnitId)
 		            .claim("ReferenceId", order.referenceID)
-		            .claim("Payload", order)
+		            .claim("Payload", order.orderDetails)
 		            .signWith(signatureAlgorithm, signingKey);
 
 		    // Add the expiration or TTL (Time To Live) for this JWT
