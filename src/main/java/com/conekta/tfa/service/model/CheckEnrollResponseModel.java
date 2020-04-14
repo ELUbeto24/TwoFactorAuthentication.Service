@@ -53,8 +53,8 @@ public class CheckEnrollResponseModel {
 	@Column(name = "acsUrl", length = 2000, nullable = true)
 	public String acsURL;
 	
-	@Column(name = "proofXml", length = 2000, nullable = true)
-	public String proofXML;
+	// @Column(name = "proofXml", length = 2000, nullable = true)
+	// public String proofXML;
 	
 	@Column(name = "requestToken", length = 100, nullable = true)
 	public String requestToken;
