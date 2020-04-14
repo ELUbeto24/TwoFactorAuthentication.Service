@@ -759,3 +759,841 @@ requestToken=AxjjxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxgCt9
 missingField_0=card_accountNumber
 
 2020-04-08 22:01:47.344 http-nio-9898-exec-2 INFO     > Client, End of runTransaction Call   9672ms
+
+2020-04-13 15:29:48.765 http-nio-9898-exec-3 TRANSTART> =======================================
+2020-04-13 15:29:48.768 http-nio-9898-exec-3 MERCHCFG > merchantID=conekta_mx, keysDirectory=/Users/edilbertolopezubaldo/Projects/TwoFactorAuthentication.Service/, keyAlias=conekta_mx, keyPassword=conekta_mx, sendToProduction=false, sendToAkamai=false, targetAPIVersion=1.150, keyFilename=conekta_mx.p12, serverURL=(null), namespaceURI=(null), enableLog=true, logDirectory=/Users/edilbertolopezubaldo/Projects/TwoFactorAuthentication.Service/, logFilename=(null), logMaximumSize=10, customHttpClass=(null), customHttpClassEnabled=false, useHttpClient=false, enableJdkCert=false, enableCacert=false, timeout=1000, useSignAndEncrypted=false, certificateCacheEnabled=true
+2020-04-13 15:29:48.826 http-nio-9898-exec-3 REQUEST  > 
+UUID   >  f1a8d388-bf13-4068-8347-f043e03c8e93
+Input request is
+======================================= 
+billTo_city=
+purchaseTotals_currency=MXN
+billTo_email=
+clientLibrary=Java Basic
+merchantReferenceCode=12a82594-f7f4-49ea-aa2c-fed17412b26b
+billTo_country=MX
+billTo_lastName=
+billTo_street1=
+billTo_postalCode=
+clientLibraryVersion=6.2.7
+item_0_giftCategory=false
+payerAuthEnrollService_run=true
+payerAuthEnrollService_referenceID=Texxxxxxxx57
+billTo_firstName=
+billTo_state=
+card_expirationMonth=xx
+item_0_unitPrice=6000.00
+merchantID=conekta_mx
+clientEnvironment=Mac OS X/10.15.3/Oracle Corporation/13.0.2
+card_expirationYear=xxxx
+billTo_phoneNumber=
+card_accountNumber=4000xxxxxxxx1091
+
+2020-04-13 15:29:48.837 http-nio-9898-exec-3 INFO     > Client, End of soapWrap   71ms
+2020-04-13 15:29:48.860 http-nio-9898-exec-3 INFO     > Loading the certificate from p12 file 
+2020-04-13 15:29:49.507 http-nio-9898-exec-3 INFO     > Client, End of loading Merchant Certificates 671ms
+2020-04-13 15:29:49.509 http-nio-9898-exec-3 INFO     > Signing request...
+2020-04-13 15:29:54.721 http-nio-9898-exec-3 INFO     > Client, End of createSignedDoc   5213ms
+2020-04-13 15:29:54.723 http-nio-9898-exec-3 INFO     > Using HttpURLConnection for connections.
+2020-04-13 15:29:55.433 http-nio-9898-exec-3 INFO     > Sending 4155 bytes to https://ics2wstest.ic3.com/commerce/1.x/transactionProcessor
+2020-04-13 15:29:55.434 http-nio-9898-exec-3 INFO     > Reading response...
+2020-04-13 15:29:55.980 http-nio-9898-exec-3 INFO     > Parsing response...
+2020-04-13 15:29:55.988 http-nio-9898-exec-3 REPLY    > 
+payerAuthEnrollReply_reasonCode=475
+decision=REJECT
+payerAuthEnrollReply_authenticationTransactionID=E0PnxxxxxxxxxxxxzsQ0
+payerAuthEnrollReply_paReq=eyJtZXNzYWdlVHlwZSI6IkNSZXEiLCJtZXNzYWdlVmVyc2lvbiI6IjIuMS4wIiwidGhyZWVEU1NlcnZlclRyYW5zSUQiOiI4YTcxMDVhZS1lYjkxLTRlYTgtOTYwNC0zNGMwMjQ3NTM3MjMiLCJhY3NUcmFuc0lEIjoiNDc1Y2U3ZDItNGQyYS00NTg2LThhYzItYTQ3ZGYzNTAzZmUyIiwiY2hhbGxlbmdlV2luZG93U2l6ZSI6IjAyIn0
+merchantReferenceCode=12a82594-f7f4-49ea-aa2c-fed17412b26b
+requestID=5868097955056394303012
+payerAuthEnrollReply_acsURL=https://0merchantacsstag.cardinalcommerce.com/MerchantACSWeb/creq.jsp
+payerAuthEnrollReply_veresEnrolled=x
+reasonCode=475
+requestToken=Axjzxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx1hCA
+payerAuthEnrollReply_specificationVersion=xxxxx
+
+2020-04-13 15:29:55.989 http-nio-9898-exec-3 INFO     > Client, End of runTransaction Call   7224ms
+
+2020-04-13 15:46:10.438 http-nio-9898-exec-6 TRANSTART> =======================================
+2020-04-13 15:46:10.440 http-nio-9898-exec-6 MERCHCFG > merchantID=conekta_mx, keysDirectory=/Users/edilbertolopezubaldo/Projects/TwoFactorAuthentication.Service/, keyAlias=conekta_mx, keyPassword=conekta_mx, sendToProduction=false, sendToAkamai=false, targetAPIVersion=1.150, keyFilename=conekta_mx.p12, serverURL=(null), namespaceURI=(null), enableLog=true, logDirectory=/Users/edilbertolopezubaldo/Projects/TwoFactorAuthentication.Service/, logFilename=(null), logMaximumSize=10, customHttpClass=(null), customHttpClassEnabled=false, useHttpClient=false, enableJdkCert=false, enableCacert=false, timeout=1000, useSignAndEncrypted=false, certificateCacheEnabled=true
+2020-04-13 15:46:10.447 http-nio-9898-exec-6 REQUEST  > 
+UUID   >  f462036a-24c2-4ec7-bddf-f9ff44064fff
+Input request is
+======================================= 
+billTo_city=
+purchaseTotals_currency=MXN
+billTo_email=
+clientLibrary=Java Basic
+merchantReferenceCode=b56ac888-b964-483d-89e4-1790b9d17c1b
+billTo_country=MX
+billTo_lastName=
+billTo_street1=
+billTo_postalCode=
+clientLibraryVersion=6.2.7
+item_0_giftCategory=false
+payerAuthEnrollService_run=true
+payerAuthEnrollService_referenceID=Texxxxxxxx57
+billTo_firstName=
+billTo_state=
+card_expirationMonth=xx
+item_0_unitPrice=6000.00
+merchantID=conekta_mx
+clientEnvironment=Mac OS X/10.15.3/Oracle Corporation/13.0.2
+card_expirationYear=xxxx
+billTo_phoneNumber=
+card_accountNumber=4000xxxxxxxx1091
+
+2020-04-13 15:46:10.450 http-nio-9898-exec-6 INFO     > Client, End of soapWrap   15ms
+2020-04-13 15:46:10.456 http-nio-9898-exec-6 INFO     > Client, End of loading Merchant Certificates 3ms
+2020-04-13 15:46:10.458 http-nio-9898-exec-6 INFO     > Signing request...
+2020-04-13 15:46:10.578 http-nio-9898-exec-6 INFO     > Client, End of createSignedDoc   124ms
+2020-04-13 15:46:10.580 http-nio-9898-exec-6 INFO     > Using HttpURLConnection for connections.
+2020-04-13 15:46:11.109 http-nio-9898-exec-6 INFO     > Sending 4132 bytes to https://ics2wstest.ic3.com/commerce/1.x/transactionProcessor
+2020-04-13 15:46:11.110 http-nio-9898-exec-6 INFO     > Reading response...
+2020-04-13 15:46:11.817 http-nio-9898-exec-6 INFO     > Parsing response...
+2020-04-13 15:46:11.824 http-nio-9898-exec-6 REPLY    > 
+payerAuthEnrollReply_reasonCode=475
+decision=REJECT
+payerAuthEnrollReply_authenticationTransactionID=LFxwxxxxxxxxxxxx3qQ0
+payerAuthEnrollReply_paReq=eyJtZXNzYWdlVHlwZSI6IkNSZXEiLCJtZXNzYWdlVmVyc2lvbiI6IjIuMS4wIiwidGhyZWVEU1NlcnZlclRyYW5zSUQiOiIzMGU0MzI0Yy04ZDhkLTQyMDEtYmU0MS0yM2M1YmYzNWI0YmYiLCJhY3NUcmFuc0lEIjoiYzlmNzBlNjktZDVkYy00ZGExLWIxM2QtNTI3OGY4YTgxMjQ5IiwiY2hhbGxlbmdlV2luZG93U2l6ZSI6IjAyIn0
+merchantReferenceCode=b56ac888-b964-483d-89e4-1790b9d17c1b
+requestID=5868107711936425703010
+payerAuthEnrollReply_acsURL=https://0merchantacsstag.cardinalcommerce.com/MerchantACSWeb/creq.jsp
+payerAuthEnrollReply_veresEnrolled=x
+reasonCode=475
+requestToken=AxjzxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxmxAl
+payerAuthEnrollReply_specificationVersion=xxxxx
+
+2020-04-13 15:46:11.825 http-nio-9898-exec-6 INFO     > Client, End of runTransaction Call   1390ms
+
+2020-04-13 16:29:11.701 http-nio-9898-exec-1 TRANSTART> =======================================
+2020-04-13 16:29:11.703 http-nio-9898-exec-1 MERCHCFG > merchantID=conekta_mx, keysDirectory=/Users/edilbertolopezubaldo/Projects/TwoFactorAuthentication.Service/, keyAlias=conekta_mx, keyPassword=conekta_mx, sendToProduction=false, sendToAkamai=false, targetAPIVersion=1.150, keyFilename=conekta_mx.p12, serverURL=(null), namespaceURI=(null), enableLog=true, logDirectory=/Users/edilbertolopezubaldo/Projects/TwoFactorAuthentication.Service/, logFilename=(null), logMaximumSize=10, customHttpClass=(null), customHttpClassEnabled=false, useHttpClient=false, enableJdkCert=false, enableCacert=false, timeout=1000, useSignAndEncrypted=false, certificateCacheEnabled=true
+2020-04-13 16:29:11.709 http-nio-9898-exec-1 REQUEST  > 
+UUID   >  4c1ae0d8-85dc-41fd-8967-5206da4377b6
+Input request is
+======================================= 
+billTo_city=
+purchaseTotals_currency=MXN
+billTo_email=
+clientLibrary=Java Basic
+merchantReferenceCode=c11c9e33-cb1f-400f-ac28-768f8ac9682c
+billTo_country=MX
+billTo_lastName=
+billTo_street1=
+billTo_postalCode=
+clientLibraryVersion=6.2.7
+item_0_giftCategory=false
+payerAuthEnrollService_run=true
+payerAuthEnrollService_referenceID=Texxxxxxxx28
+billTo_firstName=
+billTo_state=
+card_expirationMonth=xx
+item_0_unitPrice=3000.00
+merchantID=conekta_mx
+clientEnvironment=Mac OS X/10.15.3/Oracle Corporation/13.0.2
+card_expirationYear=xxxx
+billTo_phoneNumber=
+card_accountNumber=4000xxxxxxxx1091
+
+2020-04-13 16:29:11.713 http-nio-9898-exec-1 INFO     > Client, End of soapWrap   14ms
+2020-04-13 16:29:11.715 http-nio-9898-exec-1 INFO     > Client, End of loading Merchant Certificates 2ms
+2020-04-13 16:29:11.716 http-nio-9898-exec-1 INFO     > Signing request...
+2020-04-13 16:29:11.751 http-nio-9898-exec-1 INFO     > Client, End of createSignedDoc   36ms
+2020-04-13 16:29:11.753 http-nio-9898-exec-1 INFO     > Using HttpURLConnection for connections.
+2020-04-13 16:29:12.283 http-nio-9898-exec-1 INFO     > Sending 4138 bytes to https://ics2wstest.ic3.com/commerce/1.x/transactionProcessor
+2020-04-13 16:29:12.284 http-nio-9898-exec-1 INFO     > Reading response...
+2020-04-13 16:29:12.821 http-nio-9898-exec-1 INFO     > Parsing response...
+2020-04-13 16:29:12.827 http-nio-9898-exec-1 REPLY    > 
+payerAuthEnrollReply_reasonCode=475
+decision=REJECT
+payerAuthEnrollReply_authenticationTransactionID=sUvdxxxxxxxxxxxx2H40
+payerAuthEnrollReply_paReq=eyJtZXNzYWdlVHlwZSI6IkNSZXEiLCJtZXNzYWdlVmVyc2lvbiI6IjIuMS4wIiwidGhyZWVEU1NlcnZlclRyYW5zSUQiOiI0MmIwZDQ2MS1mY2UyLTQwY2MtYWI2Yy1lZTFlY2RjNTNmZDMiLCJhY3NUcmFuc0lEIjoiNmFmMDU5N2YtYTI1Zi00MDk3LTg4N2EtYWFkMzcyYzU5NWNhIiwiY2hhbGxlbmdlV2luZG93U2l6ZSI6IjAyIn0
+merchantReferenceCode=c11c9e33-cb1f-400f-ac28-768f8ac9682c
+requestID=5868133523646723703009
+payerAuthEnrollReply_acsURL=https://0merchantacsstag.cardinalcommerce.com/MerchantACSWeb/creq.jsp
+payerAuthEnrollReply_veresEnrolled=x
+reasonCode=475
+requestToken=Axjzxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxrip3
+payerAuthEnrollReply_specificationVersion=xxxxx
+
+2020-04-13 16:29:12.828 http-nio-9898-exec-1 INFO     > Client, End of runTransaction Call   1129ms
+
+2020-04-13 16:43:45.242 http-nio-9898-exec-2 TRANSTART> =======================================
+2020-04-13 16:43:45.244 http-nio-9898-exec-2 MERCHCFG > merchantID=conekta_mx, keysDirectory=/Users/edilbertolopezubaldo/Projects/TwoFactorAuthentication.Service/, keyAlias=conekta_mx, keyPassword=conekta_mx, sendToProduction=false, sendToAkamai=false, targetAPIVersion=1.150, keyFilename=conekta_mx.p12, serverURL=(null), namespaceURI=(null), enableLog=true, logDirectory=/Users/edilbertolopezubaldo/Projects/TwoFactorAuthentication.Service/, logFilename=(null), logMaximumSize=10, customHttpClass=(null), customHttpClassEnabled=false, useHttpClient=false, enableJdkCert=false, enableCacert=false, timeout=1000, useSignAndEncrypted=false, certificateCacheEnabled=true
+2020-04-13 16:43:45.299 http-nio-9898-exec-2 REQUEST  > 
+UUID   >  36164ecf-2ac8-4a99-98f9-e97f905df1d5
+Input request is
+======================================= 
+billTo_city=
+purchaseTotals_currency=MXN
+billTo_email=
+clientLibrary=Java Basic
+merchantReferenceCode=2336af75-861f-468e-a52b-641a0b1f95fa
+billTo_country=MX
+billTo_lastName=
+billTo_street1=
+billTo_postalCode=
+clientLibraryVersion=6.2.7
+item_0_giftCategory=false
+payerAuthEnrollService_run=true
+payerAuthEnrollService_referenceID=Texxxxxxxx36
+billTo_firstName=
+billTo_state=
+card_expirationMonth=xx
+item_0_unitPrice=3000
+merchantID=conekta_mx
+clientEnvironment=Mac OS X/10.15.3/Oracle Corporation/13.0.2
+card_expirationYear=xxxx
+billTo_phoneNumber=
+card_accountNumber=4000xxxxxxxx1091
+
+2020-04-13 16:43:45.310 http-nio-9898-exec-2 INFO     > Client, End of soapWrap   68ms
+2020-04-13 16:43:45.332 http-nio-9898-exec-2 INFO     > Loading the certificate from p12 file 
+2020-04-13 16:43:45.871 http-nio-9898-exec-2 INFO     > Client, End of loading Merchant Certificates 562ms
+2020-04-13 16:43:45.873 http-nio-9898-exec-2 INFO     > Signing request...
+2020-04-13 16:43:51.032 http-nio-9898-exec-2 INFO     > Client, End of createSignedDoc   5160ms
+2020-04-13 16:43:51.035 http-nio-9898-exec-2 INFO     > Using HttpURLConnection for connections.
+2020-04-13 16:43:51.666 http-nio-9898-exec-2 INFO     > Sending 4152 bytes to https://ics2wstest.ic3.com/commerce/1.x/transactionProcessor
+2020-04-13 16:43:51.668 http-nio-9898-exec-2 INFO     > Reading response...
+2020-04-13 16:43:52.493 http-nio-9898-exec-2 INFO     > Parsing response...
+2020-04-13 16:43:52.498 http-nio-9898-exec-2 REPLY    > 
+payerAuthEnrollReply_reasonCode=475
+decision=REJECT
+payerAuthEnrollReply_authenticationTransactionID=RJlpxxxxxxxxxxxxka50
+payerAuthEnrollReply_paReq=eyJtZXNzYWdlVHlwZSI6IkNSZXEiLCJtZXNzYWdlVmVyc2lvbiI6IjIuMS4wIiwidGhyZWVEU1NlcnZlclRyYW5zSUQiOiIxZDdiNjkzOC1mZjZmLTRhMTYtYjE2OS1lZjkwMDcxOWQzOWMiLCJhY3NUcmFuc0lEIjoiZWNmZTU1NWMtYmRlNi00MmFlLWIzNTktZjlkMjM2YjAyNDA5IiwiY2hhbGxlbmdlV2luZG93U2l6ZSI6IjAyIn0
+merchantReferenceCode=2336af75-861f-468e-a52b-641a0b1f95fa
+requestID=5868142317376023703009
+payerAuthEnrollReply_acsURL=https://0merchantacsstag.cardinalcommerce.com/MerchantACSWeb/creq.jsp
+payerAuthEnrollReply_veresEnrolled=x
+reasonCode=475
+requestToken=AxjzxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxDSp2
+payerAuthEnrollReply_specificationVersion=xxxxx
+
+2020-04-13 16:43:52.499 http-nio-9898-exec-2 INFO     > Client, End of runTransaction Call   7258ms
+
+2020-04-13 16:44:28.856 http-nio-9898-exec-4 TRANSTART> =======================================
+2020-04-13 16:44:28.858 http-nio-9898-exec-4 MERCHCFG > merchantID=conekta_mx, keysDirectory=/Users/edilbertolopezubaldo/Projects/TwoFactorAuthentication.Service/, keyAlias=conekta_mx, keyPassword=conekta_mx, sendToProduction=false, sendToAkamai=false, targetAPIVersion=1.150, keyFilename=conekta_mx.p12, serverURL=(null), namespaceURI=(null), enableLog=true, logDirectory=/Users/edilbertolopezubaldo/Projects/TwoFactorAuthentication.Service/, logFilename=(null), logMaximumSize=10, customHttpClass=(null), customHttpClassEnabled=false, useHttpClient=false, enableJdkCert=false, enableCacert=false, timeout=1000, useSignAndEncrypted=false, certificateCacheEnabled=true
+2020-04-13 16:44:28.861 http-nio-9898-exec-4 REQUEST  > 
+UUID   >  71bc4701-6f29-4895-9071-da4ceb8c5d2a
+Input request is
+======================================= 
+billTo_city=
+purchaseTotals_currency=MXN
+billTo_email=
+clientLibrary=Java Basic
+merchantReferenceCode=efb6d2ad-62b7-41b1-b24b-2a2e2117439c
+billTo_country=MX
+billTo_lastName=
+billTo_street1=
+billTo_postalCode=
+clientLibraryVersion=6.2.7
+item_0_giftCategory=false
+payerAuthEnrollService_run=true
+payerAuthEnrollService_referenceID=Texxxxxxxx36
+billTo_firstName=
+billTo_state=
+card_expirationMonth=xx
+item_0_unitPrice=3000
+merchantID=conekta_mx
+clientEnvironment=Mac OS X/10.15.3/Oracle Corporation/13.0.2
+card_expirationYear=xxxx
+billTo_phoneNumber=
+card_accountNumber=4000xxxxxxxx1091
+
+2020-04-13 16:44:28.863 http-nio-9898-exec-4 INFO     > Client, End of soapWrap   8ms
+2020-04-13 16:44:28.866 http-nio-9898-exec-4 INFO     > Client, End of loading Merchant Certificates 2ms
+2020-04-13 16:44:28.868 http-nio-9898-exec-4 INFO     > Signing request...
+2020-04-13 16:44:28.944 http-nio-9898-exec-4 INFO     > Client, End of createSignedDoc   79ms
+2020-04-13 16:44:28.946 http-nio-9898-exec-4 INFO     > Using HttpURLConnection for connections.
+2020-04-13 16:44:29.132 http-nio-9898-exec-4 INFO     > Sending 4129 bytes to https://ics2wstest.ic3.com/commerce/1.x/transactionProcessor
+2020-04-13 16:44:29.133 http-nio-9898-exec-4 INFO     > Reading response...
+2020-04-13 16:44:29.816 http-nio-9898-exec-4 INFO     > Parsing response...
+2020-04-13 16:44:29.820 http-nio-9898-exec-4 REPLY    > 
+payerAuthEnrollReply_reasonCode=475
+decision=REJECT
+payerAuthEnrollReply_authenticationTransactionID=pQU0xxxxxxxxxxxxlDr0
+payerAuthEnrollReply_paReq=eyJtZXNzYWdlVHlwZSI6IkNSZXEiLCJtZXNzYWdlVmVyc2lvbiI6IjIuMS4wIiwidGhyZWVEU1NlcnZlclRyYW5zSUQiOiJiZWNhNGU1My1lMTY2LTQ5YjQtOTAzZS1lNzgzYWVmMmM4MzgiLCJhY3NUcmFuc0lEIjoiOTk5OTkxZWMtNTJjMS00MWI3LWEwNjUtNzlhZTZlNDMyY2NjIiwiY2hhbGxlbmdlV2luZG93U2l6ZSI6IjAyIn0
+merchantReferenceCode=efb6d2ad-62b7-41b1-b24b-2a2e2117439c
+requestID=5868142692306728703011
+payerAuthEnrollReply_acsURL=https://0merchantacsstag.cardinalcommerce.com/MerchantACSWeb/creq.jsp
+payerAuthEnrollReply_veresEnrolled=x
+reasonCode=475
+requestToken=Axjzxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxoioe
+payerAuthEnrollReply_specificationVersion=xxxxx
+
+2020-04-13 16:44:29.822 http-nio-9898-exec-4 INFO     > Client, End of runTransaction Call   967ms
+
+2020-04-13 16:44:56.326 http-nio-9898-exec-6 TRANSTART> =======================================
+2020-04-13 16:44:56.328 http-nio-9898-exec-6 MERCHCFG > merchantID=conekta_mx, keysDirectory=/Users/edilbertolopezubaldo/Projects/TwoFactorAuthentication.Service/, keyAlias=conekta_mx, keyPassword=conekta_mx, sendToProduction=false, sendToAkamai=false, targetAPIVersion=1.150, keyFilename=conekta_mx.p12, serverURL=(null), namespaceURI=(null), enableLog=true, logDirectory=/Users/edilbertolopezubaldo/Projects/TwoFactorAuthentication.Service/, logFilename=(null), logMaximumSize=10, customHttpClass=(null), customHttpClassEnabled=false, useHttpClient=false, enableJdkCert=false, enableCacert=false, timeout=1000, useSignAndEncrypted=false, certificateCacheEnabled=true
+2020-04-13 16:44:56.331 http-nio-9898-exec-6 REQUEST  > 
+UUID   >  56a0c89e-f9d9-43a4-b4ab-a9c10fcec180
+Input request is
+======================================= 
+billTo_city=
+purchaseTotals_currency=MXN
+billTo_email=
+clientLibrary=Java Basic
+merchantReferenceCode=0ecd274a-c7f3-4f37-8ca4-296d5725a6a7
+billTo_country=MX
+billTo_lastName=
+billTo_street1=
+billTo_postalCode=
+clientLibraryVersion=6.2.7
+item_0_giftCategory=false
+payerAuthEnrollService_run=true
+payerAuthEnrollService_referenceID=Texxxxxxxx36
+billTo_firstName=
+billTo_state=
+card_expirationMonth=xx
+item_0_unitPrice=3000
+merchantID=conekta_mx
+clientEnvironment=Mac OS X/10.15.3/Oracle Corporation/13.0.2
+card_expirationYear=xxxx
+billTo_phoneNumber=
+card_accountNumber=4000xxxxxxxx1091
+
+2020-04-13 16:44:56.335 http-nio-9898-exec-6 INFO     > Client, End of soapWrap   9ms
+2020-04-13 16:44:56.337 http-nio-9898-exec-6 INFO     > Client, End of loading Merchant Certificates 2ms
+2020-04-13 16:44:56.339 http-nio-9898-exec-6 INFO     > Signing request...
+2020-04-13 16:44:56.371 http-nio-9898-exec-6 INFO     > Client, End of createSignedDoc   35ms
+2020-04-13 16:44:56.373 http-nio-9898-exec-6 INFO     > Using HttpURLConnection for connections.
+2020-04-13 16:44:56.550 http-nio-9898-exec-6 INFO     > Sending 4135 bytes to https://ics2wstest.ic3.com/commerce/1.x/transactionProcessor
+2020-04-13 16:44:56.552 http-nio-9898-exec-6 INFO     > Reading response...
+2020-04-13 16:44:57.088 http-nio-9898-exec-6 INFO     > Parsing response...
+2020-04-13 16:44:57.091 http-nio-9898-exec-6 REPLY    > 
+payerAuthEnrollReply_reasonCode=475
+decision=REJECT
+payerAuthEnrollReply_authenticationTransactionID=90SLxxxxxxxxxxxx8wJ0
+payerAuthEnrollReply_paReq=eyJtZXNzYWdlVHlwZSI6IkNSZXEiLCJtZXNzYWdlVmVyc2lvbiI6IjIuMS4wIiwidGhyZWVEU1NlcnZlclRyYW5zSUQiOiI0YjQzOTEwZi0yOTM0LTRmMWYtYWYwNS02ZGY1OWFkMWZiNzgiLCJhY3NUcmFuc0lEIjoiMjlhMmY3NWQtNWMxMi00ODM0LTg5ZmItN2NiOGVhMGJiNWFkIiwiY2hhbGxlbmdlV2luZG93U2l6ZSI6IjAyIn0
+merchantReferenceCode=0ecd274a-c7f3-4f37-8ca4-296d5725a6a7
+requestID=5868142966246068303009
+payerAuthEnrollReply_acsURL=https://0merchantacsstag.cardinalcommerce.com/MerchantACSWeb/creq.jsp
+payerAuthEnrollReply_veresEnrolled=x
+reasonCode=475
+requestToken=AxjzxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxuypI
+payerAuthEnrollReply_specificationVersion=xxxxx
+
+2020-04-13 16:44:57.093 http-nio-9898-exec-6 INFO     > Client, End of runTransaction Call   768ms
+
+2020-04-13 19:09:45.301 http-nio-9898-exec-4 TRANSTART> =======================================
+2020-04-13 19:09:45.303 http-nio-9898-exec-4 MERCHCFG > merchantID=conekta_mx, keysDirectory=/Users/edilbertolopezubaldo/Projects/TwoFactorAuthentication.Service/, keyAlias=conekta_mx, keyPassword=conekta_mx, sendToProduction=false, sendToAkamai=false, targetAPIVersion=1.150, keyFilename=conekta_mx.p12, serverURL=(null), namespaceURI=(null), enableLog=true, logDirectory=/Users/edilbertolopezubaldo/Projects/TwoFactorAuthentication.Service/, logFilename=(null), logMaximumSize=10, customHttpClass=(null), customHttpClassEnabled=false, useHttpClient=false, enableJdkCert=false, enableCacert=false, timeout=1000, useSignAndEncrypted=false, certificateCacheEnabled=true
+2020-04-13 19:09:45.356 http-nio-9898-exec-4 REQUEST  > 
+UUID   >  4f47d9f1-8f43-4d4e-8845-56bbab589b1e
+Input request is
+======================================= 
+billTo_city=
+purchaseTotals_currency=MXN
+billTo_email=
+clientLibrary=Java Basic
+merchantReferenceCode=Test13042006
+billTo_country=MX
+billTo_lastName=
+billTo_street1=
+billTo_postalCode=
+clientLibraryVersion=6.2.7
+item_0_giftCategory=false
+payerAuthEnrollService_run=true
+payerAuthEnrollService_referenceID=Texxxxxxxx06
+billTo_firstName=
+billTo_state=
+card_expirationMonth=xx
+item_0_unitPrice=3000
+merchantID=conekta_mx
+clientEnvironment=Mac OS X/10.15.3/Oracle Corporation/13.0.2
+card_expirationYear=xxxx
+billTo_phoneNumber=
+card_accountNumber=4000xxxxxxxx1091
+
+2020-04-13 19:09:45.367 http-nio-9898-exec-4 INFO     > Client, End of soapWrap   67ms
+2020-04-13 19:09:45.383 http-nio-9898-exec-4 INFO     > Loading the certificate from p12 file 
+2020-04-13 19:09:45.879 http-nio-9898-exec-4 INFO     > Client, End of loading Merchant Certificates 512ms
+2020-04-13 19:09:45.881 http-nio-9898-exec-4 INFO     > Signing request...
+2020-04-13 19:09:51.041 http-nio-9898-exec-4 INFO     > Client, End of createSignedDoc   5162ms
+2020-04-13 19:09:51.044 http-nio-9898-exec-4 INFO     > Using HttpURLConnection for connections.
+2020-04-13 19:09:51.748 http-nio-9898-exec-4 INFO     > Sending 4128 bytes to https://ics2wstest.ic3.com/commerce/1.x/transactionProcessor
+2020-04-13 19:09:51.749 http-nio-9898-exec-4 INFO     > Reading response...
+2020-04-13 19:09:52.717 http-nio-9898-exec-4 INFO     > Parsing response...
+2020-04-13 19:09:52.725 http-nio-9898-exec-4 REPLY    > 
+payerAuthEnrollReply_reasonCode=475
+decision=REJECT
+payerAuthEnrollReply_authenticationTransactionID=VzYXxxxxxxxxxxxxIZK0
+payerAuthEnrollReply_paReq=eyJtZXNzYWdlVHlwZSI6IkNSZXEiLCJtZXNzYWdlVmVyc2lvbiI6IjIuMS4wIiwidGhyZWVEU1NlcnZlclRyYW5zSUQiOiJlODYxYzc1Yy03NTA4LTQzNWMtODdhNi1mOWE0YTMwYzQwYTQiLCJhY3NUcmFuc0lEIjoiZjU1NzM4YjMtNzE5Yy00MzM2LWE1NjItYmU0MTRmZjFmZTRkIiwiY2hhbGxlbmdlV2luZG93U2l6ZSI6IjAyIn0
+merchantReferenceCode=Test13042006
+requestID=5868229918516388203007
+payerAuthEnrollReply_acsURL=https://0merchantacsstag.cardinalcommerce.com/MerchantACSWeb/creq.jsp
+payerAuthEnrollReply_veresEnrolled=x
+reasonCode=475
+requestToken=AxjzxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxDyqG
+payerAuthEnrollReply_specificationVersion=xxxxx
+
+2020-04-13 19:09:52.726 http-nio-9898-exec-4 INFO     > Client, End of runTransaction Call   7426ms
+
+2020-04-13 19:24:32.439 http-nio-9898-exec-6 TRANSTART> =======================================
+2020-04-13 19:24:32.441 http-nio-9898-exec-6 MERCHCFG > merchantID=conekta_mx, keysDirectory=/Users/edilbertolopezubaldo/Projects/TwoFactorAuthentication.Service/, keyAlias=conekta_mx, keyPassword=conekta_mx, sendToProduction=false, sendToAkamai=false, targetAPIVersion=1.150, keyFilename=conekta_mx.p12, serverURL=(null), namespaceURI=(null), enableLog=true, logDirectory=/Users/edilbertolopezubaldo/Projects/TwoFactorAuthentication.Service/, logFilename=(null), logMaximumSize=10, customHttpClass=(null), customHttpClassEnabled=false, useHttpClient=false, enableJdkCert=false, enableCacert=false, timeout=1000, useSignAndEncrypted=false, certificateCacheEnabled=true
+2020-04-13 19:24:32.452 http-nio-9898-exec-6 REQUEST  > 
+UUID   >  290304b7-4c9f-490e-81cf-51b74310035d
+Input request is
+======================================= 
+billTo_city=
+purchaseTotals_currency=MXN
+billTo_email=
+clientLibrary=Java Basic
+merchantReferenceCode=Test13042023
+billTo_country=MX
+billTo_lastName=
+billTo_street1=
+billTo_postalCode=
+clientLibraryVersion=6.2.7
+item_0_giftCategory=false
+payerAuthEnrollService_run=true
+payerAuthEnrollService_referenceID=Texxxxxxxx23
+billTo_firstName=
+billTo_state=
+card_expirationMonth=xx
+item_0_unitPrice=350.00
+merchantID=conekta_mx
+clientEnvironment=Mac OS X/10.15.3/Oracle Corporation/13.0.2
+card_expirationYear=xxxx
+billTo_phoneNumber=
+card_accountNumber=4000xxxxxxxx1091
+
+2020-04-13 19:24:32.456 http-nio-9898-exec-6 INFO     > Client, End of soapWrap   19ms
+2020-04-13 19:24:32.458 http-nio-9898-exec-6 INFO     > Client, End of loading Merchant Certificates 2ms
+2020-04-13 19:24:32.460 http-nio-9898-exec-6 INFO     > Signing request...
+2020-04-13 19:24:32.570 http-nio-9898-exec-6 INFO     > Client, End of createSignedDoc   112ms
+2020-04-13 19:24:32.572 http-nio-9898-exec-6 INFO     > Using HttpURLConnection for connections.
+2020-04-13 19:24:32.885 http-nio-9898-exec-6 INFO     > Sending 4107 bytes to https://ics2wstest.ic3.com/commerce/1.x/transactionProcessor
+2020-04-13 19:24:32.886 http-nio-9898-exec-6 INFO     > Reading response...
+2020-04-13 19:24:33.418 http-nio-9898-exec-6 INFO     > Parsing response...
+2020-04-13 19:24:33.423 http-nio-9898-exec-6 REPLY    > 
+payerAuthEnrollReply_reasonCode=475
+decision=REJECT
+payerAuthEnrollReply_authenticationTransactionID=FncHxxxxxxxxxxxxC4y0
+payerAuthEnrollReply_paReq=eyJtZXNzYWdlVHlwZSI6IkNSZXEiLCJtZXNzYWdlVmVyc2lvbiI6IjIuMS4wIiwidGhyZWVEU1NlcnZlclRyYW5zSUQiOiI0OGQ1Yzk5YS03M2M5LTRhNWYtOGFlNC04N2M4MjBiYTgzYjIiLCJhY3NUcmFuc0lEIjoiNmRmYjNmODAtZTBiNC00NTVmLWEzYmUtNTkyMjExYWZiOWNlIiwiY2hhbGxlbmdlV2luZG93U2l6ZSI6IjAyIn0
+merchantReferenceCode=Test13042023
+requestID=5868238729626105403008
+payerAuthEnrollReply_acsURL=https://0merchantacsstag.cardinalcommerce.com/MerchantACSWeb/creq.jsp
+payerAuthEnrollReply_veresEnrolled=x
+reasonCode=475
+requestToken=Axjzxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx1ivb
+payerAuthEnrollReply_specificationVersion=xxxxx
+
+2020-04-13 19:24:33.425 http-nio-9898-exec-6 INFO     > Client, End of runTransaction Call   987ms
+
+2020-04-13 19:51:28.092 http-nio-9898-exec-2 TRANSTART> =======================================
+2020-04-13 19:51:28.095 http-nio-9898-exec-2 MERCHCFG > merchantID=conekta_mx, keysDirectory=/Users/edilbertolopezubaldo/Projects/TwoFactorAuthentication.Service/, keyAlias=conekta_mx, keyPassword=conekta_mx, sendToProduction=false, sendToAkamai=false, targetAPIVersion=1.150, keyFilename=conekta_mx.p12, serverURL=(null), namespaceURI=(null), enableLog=true, logDirectory=/Users/edilbertolopezubaldo/Projects/TwoFactorAuthentication.Service/, logFilename=(null), logMaximumSize=10, customHttpClass=(null), customHttpClassEnabled=false, useHttpClient=false, enableJdkCert=false, enableCacert=false, timeout=1000, useSignAndEncrypted=false, certificateCacheEnabled=true
+2020-04-13 19:51:28.146 http-nio-9898-exec-2 REQUEST  > 
+UUID   >  298f6ad7-af2b-414e-846c-92295305e133
+Input request is
+======================================= 
+billTo_city=
+purchaseTotals_currency=MXN
+billTo_email=
+clientLibrary=Java Basic
+merchantReferenceCode=Test13042043
+billTo_country=MX
+billTo_lastName=
+billTo_street1=
+billTo_postalCode=
+clientLibraryVersion=6.2.7
+item_0_giftCategory=false
+payerAuthEnrollService_run=true
+payerAuthEnrollService_referenceID=Texxxxxxxx43
+billTo_firstName=
+billTo_state=
+card_expirationMonth=xx
+item_0_unitPrice=3000.00
+merchantID=conekta_mx
+clientEnvironment=Mac OS X/10.15.3/Oracle Corporation/13.0.2
+card_expirationYear=xxxx
+billTo_phoneNumber=
+card_accountNumber=4000xxxxxxxx1091
+
+2020-04-13 19:51:28.155 http-nio-9898-exec-2 INFO     > Client, End of soapWrap   63ms
+2020-04-13 19:51:28.424 http-nio-9898-exec-2 INFO     > Loading the certificate from p12 file 
+2020-04-13 19:51:28.880 http-nio-9898-exec-2 INFO     > Client, End of loading Merchant Certificates 725ms
+2020-04-13 19:51:28.881 http-nio-9898-exec-2 INFO     > Signing request...
+2020-04-13 19:51:34.045 http-nio-9898-exec-2 INFO     > Client, End of createSignedDoc   5165ms
+2020-04-13 19:51:34.047 http-nio-9898-exec-2 INFO     > Using HttpURLConnection for connections.
+2020-04-13 19:51:34.670 http-nio-9898-exec-2 INFO     > Sending 4131 bytes to https://ics2wstest.ic3.com/commerce/1.x/transactionProcessor
+2020-04-13 19:51:34.672 http-nio-9898-exec-2 INFO     > Reading response...
+2020-04-13 19:51:35.178 http-nio-9898-exec-2 INFO     > Parsing response...
+2020-04-13 19:51:35.185 http-nio-9898-exec-2 REPLY    > 
+payerAuthEnrollReply_reasonCode=475
+decision=REJECT
+payerAuthEnrollReply_authenticationTransactionID=7r1Zxxxxxxxxxxxx9TJ0
+payerAuthEnrollReply_paReq=eyJtZXNzYWdlVHlwZSI6IkNSZXEiLCJtZXNzYWdlVmVyc2lvbiI6IjIuMS4wIiwidGhyZWVEU1NlcnZlclRyYW5zSUQiOiJiODJlMjk0ZC1iMjA1LTQ4NjQtYTRkNy1lYmRiMWU2MmY1ODgiLCJhY3NUcmFuc0lEIjoiMmRkMThjZjctNjBiZC00MzBmLWI0OTQtNmFlMzA1NjFjMTI3IiwiY2hhbGxlbmdlV2luZG93U2l6ZSI6IjAyIn0
+merchantReferenceCode=Test13042043
+requestID=5868254947736093303010
+payerAuthEnrollReply_acsURL=https://0merchantacsstag.cardinalcommerce.com/MerchantACSWeb/creq.jsp
+payerAuthEnrollReply_veresEnrolled=x
+reasonCode=475
+requestToken=Axjzxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx2iq/
+payerAuthEnrollReply_specificationVersion=xxxxx
+
+2020-04-13 19:51:35.186 http-nio-9898-exec-2 INFO     > Client, End of runTransaction Call   7094ms
+
+2020-04-13 20:01:57.940 http-nio-9898-exec-1 TRANSTART> =======================================
+2020-04-13 20:01:57.948 http-nio-9898-exec-1 MERCHCFG > merchantID=conekta_mx, keysDirectory=/Users/edilbertolopezubaldo/Projects/TwoFactorAuthentication.Service/, keyAlias=conekta_mx, keyPassword=conekta_mx, sendToProduction=false, sendToAkamai=false, targetAPIVersion=1.150, keyFilename=conekta_mx.p12, serverURL=(null), namespaceURI=(null), enableLog=true, logDirectory=/Users/edilbertolopezubaldo/Projects/TwoFactorAuthentication.Service/, logFilename=(null), logMaximumSize=10, customHttpClass=(null), customHttpClassEnabled=false, useHttpClient=false, enableJdkCert=false, enableCacert=false, timeout=1000, useSignAndEncrypted=false, certificateCacheEnabled=true
+2020-04-13 20:01:58.001 http-nio-9898-exec-1 REQUEST  > 
+UUID   >  238884fe-5a58-4819-bfc2-b72819bdd28e
+Input request is
+======================================= 
+billTo_city=
+purchaseTotals_currency=MXN
+billTo_email=
+clientLibrary=Java Basic
+merchantReferenceCode=Test13042059
+billTo_country=MX
+billTo_lastName=
+billTo_street1=
+billTo_postalCode=
+clientLibraryVersion=6.2.7
+item_0_giftCategory=false
+payerAuthEnrollService_run=true
+payerAuthEnrollService_referenceID=Texxxxxxxx59
+billTo_firstName=
+billTo_state=
+card_expirationMonth=xx
+item_0_unitPrice=650.00
+merchantID=conekta_mx
+clientEnvironment=Mac OS X/10.15.3/Oracle Corporation/13.0.2
+card_expirationYear=xxxx
+billTo_phoneNumber=
+card_accountNumber=4000xxxxxxxx1091
+
+2020-04-13 20:01:58.010 http-nio-9898-exec-1 INFO     > Client, End of soapWrap   71ms
+2020-04-13 20:01:58.263 http-nio-9898-exec-1 INFO     > Loading the certificate from p12 file 
+2020-04-13 20:01:58.735 http-nio-9898-exec-1 INFO     > Client, End of loading Merchant Certificates 725ms
+2020-04-13 20:01:58.736 http-nio-9898-exec-1 INFO     > Signing request...
+2020-04-13 20:02:03.901 http-nio-9898-exec-1 INFO     > Client, End of createSignedDoc   5166ms
+2020-04-13 20:02:03.903 http-nio-9898-exec-1 INFO     > Using HttpURLConnection for connections.
+2020-04-13 20:02:04.604 http-nio-9898-exec-1 INFO     > Sending 4130 bytes to https://ics2wstest.ic3.com/commerce/1.x/transactionProcessor
+2020-04-13 20:02:04.606 http-nio-9898-exec-1 INFO     > Reading response...
+2020-04-13 20:02:05.615 http-nio-9898-exec-1 INFO     > Parsing response...
+2020-04-13 20:02:05.622 http-nio-9898-exec-1 REPLY    > 
+payerAuthEnrollReply_reasonCode=475
+decision=REJECT
+payerAuthEnrollReply_authenticationTransactionID=SsJZxxxxxxxxxxxxcjD0
+payerAuthEnrollReply_paReq=eyJtZXNzYWdlVHlwZSI6IkNSZXEiLCJtZXNzYWdlVmVyc2lvbiI6IjIuMS4wIiwidGhyZWVEU1NlcnZlclRyYW5zSUQiOiI5ODgwNmRmNy0xZGE1LTQyYzYtOTZlZi1kOTJkZmFjOWFiOTUiLCJhY3NUcmFuc0lEIjoiZGM3ZWNhMmItYWNmOS00ZDU5LWJhMDktYTQ1OWM5ODY0ZGZkIiwiY2hhbGxlbmdlV2luZG93U2l6ZSI6IjAyIn0
+merchantReferenceCode=Test13042059
+requestID=5868261247416264103009
+payerAuthEnrollReply_acsURL=https://0merchantacsstag.cardinalcommerce.com/MerchantACSWeb/creq.jsp
+payerAuthEnrollReply_veresEnrolled=x
+reasonCode=475
+requestToken=Axjzxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx9Cp7
+payerAuthEnrollReply_specificationVersion=xxxxx
+
+2020-04-13 20:02:05.624 http-nio-9898-exec-1 INFO     > Client, End of runTransaction Call   7684ms
+
+2020-04-13 20:03:05.369 http-nio-9898-exec-2 TRANSTART> =======================================
+2020-04-13 20:03:05.371 http-nio-9898-exec-2 MERCHCFG > merchantID=conekta_mx, keysDirectory=/Users/edilbertolopezubaldo/Projects/TwoFactorAuthentication.Service/, keyAlias=conekta_mx, keyPassword=conekta_mx, sendToProduction=false, sendToAkamai=false, targetAPIVersion=1.150, keyFilename=conekta_mx.p12, serverURL=(null), namespaceURI=(null), enableLog=true, logDirectory=/Users/edilbertolopezubaldo/Projects/TwoFactorAuthentication.Service/, logFilename=(null), logMaximumSize=10, customHttpClass=(null), customHttpClassEnabled=false, useHttpClient=false, enableJdkCert=false, enableCacert=false, timeout=1000, useSignAndEncrypted=false, certificateCacheEnabled=true
+2020-04-13 20:03:05.374 http-nio-9898-exec-2 REQUEST  > 
+UUID   >  665d2c3b-1524-4c88-96c1-02396cdd4482
+Input request is
+======================================= 
+billTo_city=
+purchaseTotals_currency=MXN
+billTo_email=
+clientLibrary=Java Basic
+merchantReferenceCode=Test13042059
+billTo_country=MX
+billTo_lastName=
+billTo_street1=
+billTo_postalCode=
+clientLibraryVersion=6.2.7
+item_0_giftCategory=false
+payerAuthEnrollService_run=true
+payerAuthEnrollService_referenceID=-Txxxxxxxxx59
+billTo_firstName=
+billTo_state=
+card_expirationMonth=xx
+item_0_unitPrice=650.00
+merchantID=conekta_mx
+clientEnvironment=Mac OS X/10.15.3/Oracle Corporation/13.0.2
+card_expirationYear=xxxx
+billTo_phoneNumber=
+card_accountNumber=4000xxxxxxxx1091
+
+2020-04-13 20:03:05.377 http-nio-9898-exec-2 INFO     > Client, End of soapWrap   9ms
+2020-04-13 20:03:05.379 http-nio-9898-exec-2 INFO     > Client, End of loading Merchant Certificates 2ms
+2020-04-13 20:03:05.381 http-nio-9898-exec-2 INFO     > Signing request...
+2020-04-13 20:03:05.454 http-nio-9898-exec-2 INFO     > Client, End of createSignedDoc   75ms
+2020-04-13 20:03:05.456 http-nio-9898-exec-2 INFO     > Using HttpURLConnection for connections.
+2020-04-13 20:03:05.971 http-nio-9898-exec-2 INFO     > Sending 4108 bytes to https://ics2wstest.ic3.com/commerce/1.x/transactionProcessor
+2020-04-13 20:03:05.973 http-nio-9898-exec-2 INFO     > Reading response...
+2020-04-13 20:03:06.763 http-nio-9898-exec-2 INFO     > Parsing response...
+2020-04-13 20:03:06.772 http-nio-9898-exec-2 REPLY    > 
+payerAuthEnrollReply_proxyPAN=3570248
+decision=REJECT
+payerAuthEnrollReply_authenticationTransactionID=Q8bTxxxxxxxxxxxxGa70
+merchantReferenceCode=Test13042059
+payerAuthEnrollReply_authenticationPath=xxxxxxxx
+payerAuthEnrollReply_veresEnrolled=x
+payerAuthEnrollReply_reasonCode=475
+payerAuthEnrollReply_paReq=eNpVkU9zgjAQxe/5FI7TMwkhAnXWzPhnrB7qaKvO9BhDpjAWkACi/fRNEGt7299mF957C9tYKzV7V7LWisOrKkvxqXpJNOpvwsO2OOrmvC52chIcX0RA+hzW4zdVcDgrXSZ5xl2HOBTwHZH5hJaxyCoOQhaT5Yoz/5m6PuAOEaRKL2fcpR4b+EEI+MYIMpEqPs0zdawE4JYQyLzOKn3lISOA74Cg1l88rqpTOcS4aRpHXg9GQV5rqRyZpxiwnUCAH3LWta1K4/KSRHy3jZP9Yq5lFtHdYr7/IEtPkChefY9HgO0EgkhUilNCCWEu6xF3SLwhMU7aPgKRWjn8qecPiEOMvK6B4GR/Nb6RebRvf1vGVa21yuSVs5AZW3dCoC4nE4CZMZn+1sbGQ/x0YZOVlYnMGwSEstBG23K7nph8KCNuu5+0YWG7g7vD4e7Gpvp3+x88pqiu
+payerAuthEnrollReply_proofXML=&lt;AuthProof&gt;&lt;Time&gt;2020 Apr 14 01:03:06&lt;/Time&gt;&lt;DSUrl&gt;https://merchantacsstag.cardinalcommerce.com/MerchantACSWeb/vereq.jsp?acqid=CYBS&lt;/DSUrl&gt;&lt;VEReqProof&gt;&lt;Message id=&quot;Q8bTqkrwvPqUcB7kGa70&quot;&gt;&lt;VEReq&gt;&lt;version&gt;1.0.2&lt;/version&gt;&lt;pan&gt;XXXXXXXXXXXX1091&lt;/pan&gt;&lt;Merchant&gt;&lt;acqBIN&gt;469216&lt;/acqBIN&gt;&lt;merID&gt;12345678&lt;/merID&gt;&lt;/Merchant&gt;&lt;Browser&gt;&lt;deviceCategory&gt;0&lt;/deviceCategory&gt;&lt;/Browser&gt;&lt;/VEReq&gt;&lt;/Message&gt;&lt;/VEReqProof&gt;&lt;VEResProof&gt;&lt;Message id=&quot;Q8bTqkrwvPqUcB7kGa70&quot;&gt;&lt;VERes&gt;&lt;version&gt;1.0.2&lt;/version&gt;&lt;CH&gt;&lt;enrolled&gt;Y&lt;/enrolled&gt;&lt;acctID&gt;3570248&lt;/acctID&gt;&lt;/CH&gt;&lt;url&gt;https://merchantacsstag.cardinalcommerce.com/MerchantACSWeb/pareq.jsp?vaa=b&amp;amp;gold=AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA&lt;/url&gt;&lt;protocol&gt;ThreeDSecure&lt;/protocol&gt;&lt;/VERes&gt;&lt;/Message&gt;&lt;/VEResProof&gt;&lt;/AuthProof&gt;
+requestID=5868261860806000903011
+payerAuthEnrollReply_acsURL=https://merchantacsstag.cardinalcommerce.com/MerchantACSWeb/pareq.jsp?vaa=b&amp;gold=AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+reasonCode=475
+requestToken=Axjzxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx9Cp6
+payerAuthEnrollReply_specificationVersion=xxxxx
+payerAuthEnrollReply_xid=UThiVHFrcnd2UHFVY0I3a0dhNzA=
+
+2020-04-13 20:03:06.774 http-nio-9898-exec-2 INFO     > Client, End of runTransaction Call   1405ms
+
+2020-04-14 15:10:01.623 http-nio-9898-exec-4 TRANSTART> =======================================
+2020-04-14 15:10:01.629 http-nio-9898-exec-4 MERCHCFG > merchantID=conekta_mx, keysDirectory=/Users/edilbertolopezubaldo/Projects/TwoFactorAuthentication.Service/, keyAlias=conekta_mx, keyPassword=conekta_mx, sendToProduction=false, sendToAkamai=false, targetAPIVersion=1.150, keyFilename=conekta_mx.p12, serverURL=(null), namespaceURI=(null), enableLog=true, logDirectory=/Users/edilbertolopezubaldo/Projects/TwoFactorAuthentication.Service/, logFilename=(null), logMaximumSize=10, customHttpClass=(null), customHttpClassEnabled=false, useHttpClient=false, enableJdkCert=false, enableCacert=false, timeout=1000, useSignAndEncrypted=false, certificateCacheEnabled=true
+2020-04-14 15:10:01.713 http-nio-9898-exec-4 REQUEST  > 
+UUID   >  adcc1158-b74d-43b1-aecc-2f475c8cbbc3
+Input request is
+======================================= 
+billTo_city=
+purchaseTotals_currency=MXN
+billTo_email=
+clientLibrary=Java Basic
+merchantReferenceCode=8f04bafc-6073-4ed0-936c-ceefeb8e738c
+billTo_country=MX
+billTo_lastName=
+billTo_street1=
+billTo_postalCode=
+clientLibraryVersion=6.2.7
+item_0_giftCategory=false
+payerAuthEnrollService_run=true
+payerAuthEnrollService_referenceID=Texxxxxxxx47
+billTo_firstName=
+billTo_state=
+card_expirationMonth=xx
+item_0_unitPrice=7000.00
+merchantID=conekta_mx
+clientEnvironment=Mac OS X/10.15.3/Oracle Corporation/13.0.2
+card_expirationYear=xxxx
+billTo_phoneNumber=
+card_accountNumber=4000xxxxxxxx1091
+
+2020-04-14 15:10:01.733 http-nio-9898-exec-4 INFO     > Client, End of soapWrap   113ms
+2020-04-14 15:10:01.749 http-nio-9898-exec-4 INFO     > Loading the certificate from p12 file 
+2020-04-14 15:10:02.433 http-nio-9898-exec-4 INFO     > Client, End of loading Merchant Certificates 700ms
+2020-04-14 15:10:02.435 http-nio-9898-exec-4 INFO     > Signing request...
+2020-04-14 15:10:07.607 http-nio-9898-exec-4 INFO     > Client, End of createSignedDoc   5174ms
+2020-04-14 15:10:07.609 http-nio-9898-exec-4 INFO     > Using HttpURLConnection for connections.
+2020-04-14 15:10:09.073 http-nio-9898-exec-4 INFO     > Sending 4155 bytes to https://ics2wstest.ic3.com/commerce/1.x/transactionProcessor
+2020-04-14 15:10:09.075 http-nio-9898-exec-4 INFO     > Reading response...
+2020-04-14 15:10:09.824 http-nio-9898-exec-4 INFO     > Parsing response...
+2020-04-14 15:10:09.834 http-nio-9898-exec-4 REPLY    > 
+payerAuthEnrollReply_reasonCode=475
+decision=REJECT
+payerAuthEnrollReply_authenticationTransactionID=Asxkxxxxxxxxxxxxcoh0
+payerAuthEnrollReply_paReq=eyJtZXNzYWdlVHlwZSI6IkNSZXEiLCJtZXNzYWdlVmVyc2lvbiI6IjIuMS4wIiwidGhyZWVEU1NlcnZlclRyYW5zSUQiOiI1OTZiYzk4Mi1hNjMwLTRmOTQtODI2Yi00YjQ1MTAyMDgxM2MiLCJhY3NUcmFuc0lEIjoiMWIxODI3NDQtMjFlNC00ZDRjLTgxYWItOWQ5MDVmNTYxNzNjIiwiY2hhbGxlbmdlV2luZG93U2l6ZSI6IjAyIn0
+merchantReferenceCode=8f04bafc-6073-4ed0-936c-ceefeb8e738c
+requestID=5868950091806507003009
+payerAuthEnrollReply_acsURL=https://0merchantacsstag.cardinalcommerce.com/MerchantACSWeb/creq.jsp
+payerAuthEnrollReply_veresEnrolled=x
+reasonCode=475
+requestToken=AxjzxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxtA/A
+payerAuthEnrollReply_specificationVersion=xxxxx
+
+2020-04-14 15:10:09.835 http-nio-9898-exec-4 INFO     > Client, End of runTransaction Call   8215ms
+
+2020-04-14 16:02:33.769 http-nio-9898-exec-8 TRANSTART> =======================================
+2020-04-14 16:02:33.771 http-nio-9898-exec-8 MERCHCFG > merchantID=conekta_mx, keysDirectory=/Users/edilbertolopezubaldo/Projects/TwoFactorAuthentication.Service/, keyAlias=conekta_mx, keyPassword=conekta_mx, sendToProduction=false, sendToAkamai=false, targetAPIVersion=1.150, keyFilename=conekta_mx.p12, serverURL=(null), namespaceURI=(null), enableLog=true, logDirectory=/Users/edilbertolopezubaldo/Projects/TwoFactorAuthentication.Service/, logFilename=(null), logMaximumSize=10, customHttpClass=(null), customHttpClassEnabled=false, useHttpClient=false, enableJdkCert=false, enableCacert=false, timeout=1000, useSignAndEncrypted=false, certificateCacheEnabled=true
+2020-04-14 16:02:33.862 http-nio-9898-exec-8 REQUEST  > 
+UUID   >  7d561454-d490-4709-84e7-8908d8b16dba
+Input request is
+======================================= 
+billTo_city=
+purchaseTotals_currency=MXN
+billTo_email=
+clientLibrary=Java Basic
+merchantReferenceCode=9229afc8-01ae-4b38-a896-f0bc5c3c1c1a
+billTo_country=MX
+billTo_lastName=
+billTo_street1=
+billTo_postalCode=
+clientLibraryVersion=6.2.7
+item_0_giftCategory=false
+payerAuthEnrollService_run=true
+payerAuthEnrollService_referenceID=Texxxxxxxx42
+billTo_firstName=
+billTo_state=
+card_expirationMonth=xx
+item_0_unitPrice=7000.00
+merchantID=conekta_mx
+clientEnvironment=Mac OS X/10.15.3/Oracle Corporation/13.0.2
+card_expirationYear=xxxx
+billTo_phoneNumber=
+card_accountNumber=4000xxxxxxxx1091
+
+2020-04-14 16:02:33.872 http-nio-9898-exec-8 INFO     > Client, End of soapWrap   104ms
+2020-04-14 16:02:33.891 http-nio-9898-exec-8 INFO     > Loading the certificate from p12 file 
+2020-04-14 16:02:34.420 http-nio-9898-exec-8 INFO     > Client, End of loading Merchant Certificates 548ms
+2020-04-14 16:02:34.422 http-nio-9898-exec-8 INFO     > Signing request...
+2020-04-14 16:02:39.589 http-nio-9898-exec-8 INFO     > Client, End of createSignedDoc   5169ms
+2020-04-14 16:02:39.592 http-nio-9898-exec-8 INFO     > Using HttpURLConnection for connections.
+2020-04-14 16:02:40.430 http-nio-9898-exec-8 INFO     > Sending 4155 bytes to https://ics2wstest.ic3.com/commerce/1.x/transactionProcessor
+2020-04-14 16:02:40.431 http-nio-9898-exec-8 INFO     > Reading response...
+2020-04-14 16:02:40.952 http-nio-9898-exec-8 INFO     > Parsing response...
+2020-04-14 16:02:40.961 http-nio-9898-exec-8 REPLY    > 
+payerAuthEnrollReply_reasonCode=475
+decision=REJECT
+payerAuthEnrollReply_authenticationTransactionID=g1a4xxxxxxxxxxxx2fj0
+payerAuthEnrollReply_paReq=eyJtZXNzYWdlVHlwZSI6IkNSZXEiLCJtZXNzYWdlVmVyc2lvbiI6IjIuMS4wIiwidGhyZWVEU1NlcnZlclRyYW5zSUQiOiI4YmE5NGExZC1kMTUxLTQzNzQtYTY4ZS0yMjhhOTIzMzUyODciLCJhY3NUcmFuc0lEIjoiZTRmNWNlMjYtYzRlMS00N2Y5LTg4NmQtZWExOGZlNGY4MDBiIiwiY2hhbGxlbmdlV2luZG93U2l6ZSI6IjAyIn0
+merchantReferenceCode=9229afc8-01ae-4b38-a896-f0bc5c3c1c1a
+requestID=5868981605176106703011
+payerAuthEnrollReply_acsURL=https://0merchantacsstag.cardinalcommerce.com/MerchantACSWeb/creq.jsp
+payerAuthEnrollReply_veresEnrolled=x
+reasonCode=475
+requestToken=AxjzxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxsA/I
+payerAuthEnrollReply_specificationVersion=xxxxx
+
+2020-04-14 16:02:40.963 http-nio-9898-exec-8 INFO     > Client, End of runTransaction Call   7194ms
+
+2020-04-14 16:04:00.188 http-nio-9898-exec-1 TRANSTART> =======================================
+2020-04-14 16:04:00.190 http-nio-9898-exec-1 MERCHCFG > merchantID=conekta_mx, keysDirectory=/Users/edilbertolopezubaldo/Projects/TwoFactorAuthentication.Service/, keyAlias=conekta_mx, keyPassword=conekta_mx, sendToProduction=false, sendToAkamai=false, targetAPIVersion=1.150, keyFilename=conekta_mx.p12, serverURL=(null), namespaceURI=(null), enableLog=true, logDirectory=/Users/edilbertolopezubaldo/Projects/TwoFactorAuthentication.Service/, logFilename=(null), logMaximumSize=10, customHttpClass=(null), customHttpClassEnabled=false, useHttpClient=false, enableJdkCert=false, enableCacert=false, timeout=1000, useSignAndEncrypted=false, certificateCacheEnabled=true
+2020-04-14 16:04:00.193 http-nio-9898-exec-1 REQUEST  > 
+UUID   >  db21bfc3-64f3-446e-bee6-0fca5098b0ea
+Input request is
+======================================= 
+billTo_city=
+purchaseTotals_currency=MXN
+billTo_email=
+clientLibrary=Java Basic
+merchantReferenceCode=e6118df0-0ae6-4aa7-9fe5-ae9847355084
+billTo_country=MX
+billTo_lastName=
+billTo_street1=
+billTo_postalCode=
+clientLibraryVersion=6.2.7
+item_0_giftCategory=false
+payerAuthEnrollService_run=true
+payerAuthEnrollService_referenceID=Texxxxxxxx42
+billTo_firstName=
+billTo_state=
+card_expirationMonth=xx
+item_0_unitPrice=7000.00
+merchantID=conekta_mx
+clientEnvironment=Mac OS X/10.15.3/Oracle Corporation/13.0.2
+card_expirationYear=xxxx
+billTo_phoneNumber=
+card_accountNumber=4000xxxxxxxx1091
+
+2020-04-14 16:04:00.196 http-nio-9898-exec-1 INFO     > Client, End of soapWrap   8ms
+2020-04-14 16:04:00.198 http-nio-9898-exec-1 INFO     > Client, End of loading Merchant Certificates 2ms
+2020-04-14 16:04:00.199 http-nio-9898-exec-1 INFO     > Signing request...
+2020-04-14 16:04:00.334 http-nio-9898-exec-1 INFO     > Client, End of createSignedDoc   135ms
+2020-04-14 16:04:00.336 http-nio-9898-exec-1 INFO     > Using HttpURLConnection for connections.
+2020-04-14 16:04:00.539 http-nio-9898-exec-1 INFO     > Sending 4132 bytes to https://ics2wstest.ic3.com/commerce/1.x/transactionProcessor
+2020-04-14 16:04:00.541 http-nio-9898-exec-1 INFO     > Reading response...
+2020-04-14 16:04:01.092 http-nio-9898-exec-1 INFO     > Parsing response...
+2020-04-14 16:04:01.096 http-nio-9898-exec-1 REPLY    > 
+payerAuthEnrollReply_reasonCode=475
+decision=REJECT
+payerAuthEnrollReply_authenticationTransactionID=0Ox1xxxxxxxxxxxxewQ0
+payerAuthEnrollReply_paReq=eyJtZXNzYWdlVHlwZSI6IkNSZXEiLCJtZXNzYWdlVmVyc2lvbiI6IjIuMS4wIiwidGhyZWVEU1NlcnZlclRyYW5zSUQiOiI4Y2Q0YTE5YS02ZDQwLTRkN2MtYmNmNy0yOWQxZGNiNWE3ZmQiLCJhY3NUcmFuc0lEIjoiZjA4YzE4NmItMmRlZi00NGZmLTg0ODctZTU2MTNkYzY3Y2ZjIiwiY2hhbGxlbmdlV2luZG93U2l6ZSI6IjAyIn0
+merchantReferenceCode=e6118df0-0ae6-4aa7-9fe5-ae9847355084
+requestID=5868982406036130903007
+payerAuthEnrollReply_acsURL=https://0merchantacsstag.cardinalcommerce.com/MerchantACSWeb/creq.jsp
+payerAuthEnrollReply_veresEnrolled=x
+reasonCode=475
+requestToken=AxjzxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxtA/w
+payerAuthEnrollReply_specificationVersion=xxxxx
+
+2020-04-14 16:04:01.097 http-nio-9898-exec-1 INFO     > Client, End of runTransaction Call   909ms
+
+2020-04-14 16:08:47.129 http-nio-9898-exec-4 TRANSTART> =======================================
+2020-04-14 16:08:47.133 http-nio-9898-exec-4 MERCHCFG > merchantID=conekta_mx, keysDirectory=/Users/edilbertolopezubaldo/Projects/TwoFactorAuthentication.Service/, keyAlias=conekta_mx, keyPassword=conekta_mx, sendToProduction=false, sendToAkamai=false, targetAPIVersion=1.150, keyFilename=conekta_mx.p12, serverURL=(null), namespaceURI=(null), enableLog=true, logDirectory=/Users/edilbertolopezubaldo/Projects/TwoFactorAuthentication.Service/, logFilename=(null), logMaximumSize=10, customHttpClass=(null), customHttpClassEnabled=false, useHttpClient=false, enableJdkCert=false, enableCacert=false, timeout=1000, useSignAndEncrypted=false, certificateCacheEnabled=true
+2020-04-14 16:08:47.137 http-nio-9898-exec-4 REQUEST  > 
+UUID   >  3f325fe5-c9b9-466b-a55e-c19fed5c098f
+Input request is
+======================================= 
+billTo_city=
+purchaseTotals_currency=MXN
+billTo_email=
+clientLibrary=Java Basic
+merchantReferenceCode=cfa578f0-d787-4692-98b1-a9e4ea62b956
+billTo_country=MX
+billTo_lastName=
+billTo_street1=
+billTo_postalCode=
+clientLibraryVersion=6.2.7
+item_0_giftCategory=false
+payerAuthEnrollService_run=true
+payerAuthEnrollService_referenceID=Texxxxxxxx42
+billTo_firstName=
+billTo_state=
+card_expirationMonth=xx
+item_0_unitPrice=7000.00
+merchantID=conekta_mx
+clientEnvironment=Mac OS X/10.15.3/Oracle Corporation/13.0.2
+card_expirationYear=xxxx
+billTo_phoneNumber=
+card_accountNumber=4000xxxxxxxx1091
+
+2020-04-14 16:08:47.140 http-nio-9898-exec-4 INFO     > Client, End of soapWrap   12ms
+2020-04-14 16:08:47.142 http-nio-9898-exec-4 INFO     > Client, End of loading Merchant Certificates 2ms
+2020-04-14 16:08:47.145 http-nio-9898-exec-4 INFO     > Signing request...
+2020-04-14 16:08:47.178 http-nio-9898-exec-4 INFO     > Client, End of createSignedDoc   35ms
+2020-04-14 16:08:47.180 http-nio-9898-exec-4 INFO     > Using HttpURLConnection for connections.
+2020-04-14 16:08:47.626 http-nio-9898-exec-4 INFO     > Sending 4138 bytes to https://ics2wstest.ic3.com/commerce/1.x/transactionProcessor
+2020-04-14 16:08:47.628 http-nio-9898-exec-4 INFO     > Reading response...
+2020-04-14 16:08:48.096 http-nio-9898-exec-4 INFO     > Parsing response...
+2020-04-14 16:08:48.101 http-nio-9898-exec-4 REPLY    > 
+payerAuthEnrollReply_reasonCode=475
+decision=REJECT
+payerAuthEnrollReply_authenticationTransactionID=ZcH9xxxxxxxxxxxxjAx0
+payerAuthEnrollReply_paReq=eyJtZXNzYWdlVHlwZSI6IkNSZXEiLCJtZXNzYWdlVmVyc2lvbiI6IjIuMS4wIiwidGhyZWVEU1NlcnZlclRyYW5zSUQiOiI0ZGNjNGE0Yi0xODM0LTQ5MjYtYWI5OS02MTgyZjU3MmM2NTQiLCJhY3NUcmFuc0lEIjoiYmRmZGI3OWItYTU2OC00YjI3LWI2YTktM2JkNjhhNjg5YzAxIiwiY2hhbGxlbmdlV2luZG93U2l6ZSI6IjAyIn0
+merchantReferenceCode=cfa578f0-d787-4692-98b1-a9e4ea62b956
+requestID=5868985277116390703012
+payerAuthEnrollReply_acsURL=https://0merchantacsstag.cardinalcommerce.com/MerchantACSWeb/creq.jsp
+payerAuthEnrollReply_veresEnrolled=x
+reasonCode=475
+requestToken=AxjzxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxAxBm
+payerAuthEnrollReply_specificationVersion=xxxxx
+
+2020-04-14 16:08:48.103 http-nio-9898-exec-4 INFO     > Client, End of runTransaction Call   975ms
+
+2020-04-14 16:10:11.530 http-nio-9898-exec-7 TRANSTART> =======================================
+2020-04-14 16:10:11.533 http-nio-9898-exec-7 MERCHCFG > merchantID=conekta_mx, keysDirectory=/Users/edilbertolopezubaldo/Projects/TwoFactorAuthentication.Service/, keyAlias=conekta_mx, keyPassword=conekta_mx, sendToProduction=false, sendToAkamai=false, targetAPIVersion=1.150, keyFilename=conekta_mx.p12, serverURL=(null), namespaceURI=(null), enableLog=true, logDirectory=/Users/edilbertolopezubaldo/Projects/TwoFactorAuthentication.Service/, logFilename=(null), logMaximumSize=10, customHttpClass=(null), customHttpClassEnabled=false, useHttpClient=false, enableJdkCert=false, enableCacert=false, timeout=1000, useSignAndEncrypted=false, certificateCacheEnabled=true
+2020-04-14 16:10:11.536 http-nio-9898-exec-7 REQUEST  > 
+UUID   >  785af409-c508-40c9-9c63-052c8a1ad42d
+Input request is
+======================================= 
+purchaseTotals_currency=MX
+clientLibrary=Java Basic
+merchantReferenceCode=Test14042027
+payerAuthValidateService_authenticationTransactionID=ZcH9xxxxxxxxxxxxjAx0
+clientLibraryVersion=6.2.7
+purchaseTotals_grandTotalAmount=5000.00
+card_expirationMonth=xx
+card_cardType=xxx
+payerAuthValidateService_run=true
+merchantID=conekta_mx
+clientEnvironment=Mac OS X/10.15.3/Oracle Corporation/13.0.2
+card_expirationYear=xxxx
+card_accountNumber=4000xxxxxxxx1091
+
+2020-04-14 16:10:11.545 http-nio-9898-exec-7 INFO     > Client, End of soapWrap   15ms
+2020-04-14 16:10:11.549 http-nio-9898-exec-7 INFO     > Client, End of loading Merchant Certificates 3ms
+2020-04-14 16:10:11.552 http-nio-9898-exec-7 INFO     > Signing request...
+2020-04-14 16:10:11.594 http-nio-9898-exec-7 INFO     > Client, End of createSignedDoc   45ms
+2020-04-14 16:10:11.596 http-nio-9898-exec-7 INFO     > Using HttpURLConnection for connections.
+2020-04-14 16:10:11.845 http-nio-9898-exec-7 INFO     > Sending 3999 bytes to https://ics2wstest.ic3.com/commerce/1.x/transactionProcessor
+2020-04-14 16:10:11.846 http-nio-9898-exec-7 INFO     > Reading response...
+2020-04-14 16:10:12.355 http-nio-9898-exec-7 INFO     > Parsing response...
+2020-04-14 16:10:12.361 http-nio-9898-exec-7 REPLY    > 
+payerAuthValidateReply_authenticationStatusMessage=Success
+decision=ACCEPT
+merchantReferenceCode=Test14042027
+payerAuthValidateReply_commerceIndicator=vbv
+payerAuthValidateReply_reasonCode=100
+payerAuthValidateReply_eciRaw=05
+payerAuthValidateReply_eci=05
+requestID=5868986119106435003007
+payerAuthValidateReply_authenticationResult=0
+payerAuthValidateReply_paresStatus=x
+reasonCode=100
+requestToken=Axizxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx5RNn
+payerAuthValidateReply_xid=MTIzNDU2Nzg5MDEyMzQ1Njc4OTA=
+payerAuthValidateReply_cavv=MTIzNDU2Nzg5MDEyMzQ1Njc4OTA=
+payerAuthValidateReply_specificationVersion=xxxxx
+
+2020-04-14 16:10:12.363 http-nio-9898-exec-7 INFO     > Client, End of runTransaction Call   833ms
