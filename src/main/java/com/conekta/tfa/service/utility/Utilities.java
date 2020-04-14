@@ -42,7 +42,7 @@ public class Utilities {
 			checkEnrollResponse.veresEnrolled = (String) cybersourceResponse.get("payerAuthEnrollReply_veresEnrolled");
 			checkEnrollResponse.reasonCode = (String ) cybersourceResponse.get("payerAuthEnrollReply_reasonCode");
 			checkEnrollResponse.paReq = (String) cybersourceResponse.get("payerAuthEnrollReply_paReq");
-			checkEnrollResponse.proofXML = (String) cybersourceResponse.get("payerAuthEnrollReply_proofXML");
+			// checkEnrollResponse.proofXML = (String) cybersourceResponse.get("payerAuthEnrollReply_proofXML");
 			checkEnrollResponse.requestId = (String) cybersourceResponse.get("requestID");
 			checkEnrollResponse.acsURL = (String) cybersourceResponse.get("payerAuthEnrollReply_acsURL");
 			checkEnrollResponse.requestToken = (String) cybersourceResponse.get("requestToken");
