@@ -2010,3 +2010,108 @@ payerAuthValidateReply_cavv=AAABAWFlmQAAAABjRWWZEEFgFz+=
 payerAuthValidateReply_specificationVersion=xxxxx
 
 2020-04-14 18:43:36.397 http-nio-9898-exec-3 INFO     > Client, End of runTransaction Call   834ms
+
+2020-04-16 15:21:25.545 http-nio-9898-exec-2 TRANSTART> =======================================
+2020-04-16 15:21:25.548 http-nio-9898-exec-2 MERCHCFG > merchantID=conekta_mx, keysDirectory=/Users/edilbertolopezubaldo/Projects/TwoFactorAuthentication.Service/, keyAlias=conekta_mx, keyPassword=conekta_mx, sendToProduction=false, sendToAkamai=false, targetAPIVersion=1.150, keyFilename=conekta_mx.p12, serverURL=(null), namespaceURI=(null), enableLog=true, logDirectory=/Users/edilbertolopezubaldo/Projects/TwoFactorAuthentication.Service/, logFilename=(null), logMaximumSize=10, customHttpClass=(null), customHttpClassEnabled=false, useHttpClient=false, enableJdkCert=false, enableCacert=false, timeout=1000, useSignAndEncrypted=false, certificateCacheEnabled=true
+2020-04-16 15:21:25.605 http-nio-9898-exec-2 REQUEST  > 
+UUID   >  46488222-9ad2-42b8-8c3f-ad1b34b380fa
+Input request is
+======================================= 
+billTo_city=
+purchaseTotals_currency=MXN
+billTo_email=
+clientLibrary=Java Basic
+merchantReferenceCode=Test-a973338c
+billTo_country=MX
+billTo_lastName=
+billTo_street1=
+billTo_postalCode=
+clientLibraryVersion=6.2.7
+item_0_giftCategory=false
+payerAuthEnrollService_run=true
+payerAuthEnrollService_referenceID=Texxxxxxxxx8c
+billTo_firstName=
+billTo_state=
+card_expirationMonth=xx
+item_0_unitPrice=10.00
+merchantID=conekta_mx
+clientEnvironment=Mac OS X/10.15.3/Oracle Corporation/13.0.2
+card_expirationYear=xxxx
+billTo_phoneNumber=
+card_accountNumber=4000xxxxxxxx0002
+
+2020-04-16 15:21:25.615 http-nio-9898-exec-2 INFO     > Client, End of soapWrap   70ms
+2020-04-16 15:21:25.633 http-nio-9898-exec-2 INFO     > Loading the certificate from p12 file 
+2020-04-16 15:21:26.148 http-nio-9898-exec-2 INFO     > Client, End of loading Merchant Certificates 533ms
+2020-04-16 15:21:26.149 http-nio-9898-exec-2 INFO     > Signing request...
+2020-04-16 15:21:31.320 http-nio-9898-exec-2 INFO     > Client, End of createSignedDoc   5171ms
+2020-04-16 15:21:31.321 http-nio-9898-exec-2 INFO     > Using HttpURLConnection for connections.
+2020-04-16 15:21:32.210 http-nio-9898-exec-2 INFO     > Sending 4131 bytes to https://ics2wstest.ic3.com/commerce/1.x/transactionProcessor
+2020-04-16 15:21:32.211 http-nio-9898-exec-2 INFO     > Reading response...
+2020-04-16 15:21:32.976 http-nio-9898-exec-2 INFO     > Parsing response...
+2020-04-16 15:21:32.987 http-nio-9898-exec-2 REPLY    > 
+payerAuthEnrollReply_proxyPAN=3570226
+decision=REJECT
+payerAuthEnrollReply_authenticationTransactionID=w9X1xxxxxxxxxxxxcbi0
+merchantReferenceCode=Test-a973338c
+payerAuthEnrollReply_authenticationPath=xxxxxxxx
+payerAuthEnrollReply_veresEnrolled=x
+payerAuthEnrollReply_reasonCode=475
+payerAuthEnrollReply_paReq=eNpVkctuwjAQRff+CoS6jh8J4aHBEg9VpRIIWlRgGZwRRCUJOAkBvr52CKXdzbFn7HvvwHKvEcefqAqNEqaYZcEOG1HYb5bdNU/Xl9XXyOfD3eSsthFrSpgPPvAk4Yw6i9JEcoc5AugDiXlCq32Q5BICdRpOZtLzu4L7QGskEKOejCUXrtfy2x2gdyaQBDHKUZrgdx4ArYiASosk11fZ8RjQBxAo9EHu8/yY9Sgty9JR161RkBZaoaPSmAK1HQToU868sFVmXF6iUIa3w2a66m7wNVwtbpvLIg7fw3gWBctBH6jtIBAGOUrBBGMe9xuC9QTvuS7Q6pxAEFs58qXBmcOMupoJHO1PgztxZq/+nhhPhdaYqKv0Op4x9SACeDka+6bHJPpbGxNP6aM3m6vKTWBuq82EqIKtuBqPTDrCY7yaj6qoqJ2h9dpovWFT/dv8D165qNI=
+payerAuthEnrollReply_proofXML=&lt;AuthProof&gt;&lt;Time&gt;2020 Apr 16 20:21:33&lt;/Time&gt;&lt;DSUrl&gt;https://merchantacsstag.cardinalcommerce.com/MerchantACSWeb/vereq.jsp?acqid=CYBS&lt;/DSUrl&gt;&lt;VEReqProof&gt;&lt;Message id=&quot;w9X1oXxWVC61BgIvcbi0&quot;&gt;&lt;VEReq&gt;&lt;version&gt;1.0.2&lt;/version&gt;&lt;pan&gt;XXXXXXXXXXXX0002&lt;/pan&gt;&lt;Merchant&gt;&lt;acqBIN&gt;469216&lt;/acqBIN&gt;&lt;merID&gt;12345678&lt;/merID&gt;&lt;/Merchant&gt;&lt;Browser&gt;&lt;deviceCategory&gt;0&lt;/deviceCategory&gt;&lt;accept&gt;*/*&lt;/accept&gt;&lt;userAgent&gt;Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_3) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.163 Safari/537.36&lt;/userAgent&gt;&lt;/Browser&gt;&lt;/VEReq&gt;&lt;/Message&gt;&lt;/VEReqProof&gt;&lt;VEResProof&gt;&lt;Message id=&quot;w9X1oXxWVC61BgIvcbi0&quot;&gt;&lt;VERes&gt;&lt;version&gt;1.0.2&lt;/version&gt;&lt;CH&gt;&lt;enrolled&gt;Y&lt;/enrolled&gt;&lt;acctID&gt;3570226&lt;/acctID&gt;&lt;/CH&gt;&lt;url&gt;https://merchantacsstag.cardinalcommerce.com/MerchantACSWeb/pareq.jsp?vaa=b&amp;amp;gold=AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA&lt;/url&gt;&lt;protocol&gt;ThreeDSecure&lt;/protocol&gt;&lt;/VERes&gt;&lt;/Message&gt;&lt;/VEResProof&gt;&lt;/AuthProof&gt;
+requestID=5870684922846966103008
+payerAuthEnrollReply_acsURL=https://merchantacsstag.cardinalcommerce.com/MerchantACSWeb/pareq.jsp?vaa=b&amp;gold=AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+reasonCode=475
+requestToken=Axjzxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx7hC3
+payerAuthEnrollReply_specificationVersion=xxxxx
+payerAuthEnrollReply_xid=dzlYMW9YeFdWQzYxQmdJdmNiaTA=
+
+2020-04-16 15:21:32.987 http-nio-9898-exec-2 INFO     > Client, End of runTransaction Call   7442ms
+
+2020-04-16 15:22:11.040 http-nio-9898-exec-4 TRANSTART> =======================================
+2020-04-16 15:22:11.043 http-nio-9898-exec-4 MERCHCFG > merchantID=conekta_mx, keysDirectory=/Users/edilbertolopezubaldo/Projects/TwoFactorAuthentication.Service/, keyAlias=conekta_mx, keyPassword=conekta_mx, sendToProduction=false, sendToAkamai=false, targetAPIVersion=1.150, keyFilename=conekta_mx.p12, serverURL=(null), namespaceURI=(null), enableLog=true, logDirectory=/Users/edilbertolopezubaldo/Projects/TwoFactorAuthentication.Service/, logFilename=(null), logMaximumSize=10, customHttpClass=(null), customHttpClassEnabled=false, useHttpClient=false, enableJdkCert=false, enableCacert=false, timeout=1000, useSignAndEncrypted=false, certificateCacheEnabled=true
+2020-04-16 15:22:11.062 http-nio-9898-exec-4 REQUEST  > 
+UUID   >  7cd8d0c3-517c-44a5-ab9c-5e17ccf193ee
+Input request is
+======================================= 
+purchaseTotals_currency=MX
+clientLibrary=Java Basic
+merchantReferenceCode=Test-a973338c
+payerAuthValidateService_authenticationTransactionID=w9X1xxxxxxxxxxxxcbi0
+clientLibraryVersion=6.2.7
+purchaseTotals_grandTotalAmount=10.00
+card_expirationMonth=xx
+card_cardType=xxx
+payerAuthValidateService_run=true
+merchantID=conekta_mx
+clientEnvironment=Mac OS X/10.15.3/Oracle Corporation/13.0.2
+card_expirationYear=xxxx
+card_accountNumber=4000xxxxxxxx0002
+
+2020-04-16 15:22:11.065 http-nio-9898-exec-4 INFO     > Client, End of soapWrap   26ms
+2020-04-16 15:22:11.067 http-nio-9898-exec-4 INFO     > Client, End of loading Merchant Certificates 2ms
+2020-04-16 15:22:11.069 http-nio-9898-exec-4 INFO     > Signing request...
+2020-04-16 15:22:11.175 http-nio-9898-exec-4 INFO     > Client, End of createSignedDoc   108ms
+2020-04-16 15:22:11.176 http-nio-9898-exec-4 INFO     > Using HttpURLConnection for connections.
+2020-04-16 15:22:11.365 http-nio-9898-exec-4 INFO     > Sending 3992 bytes to https://ics2wstest.ic3.com/commerce/1.x/transactionProcessor
+2020-04-16 15:22:11.366 http-nio-9898-exec-4 INFO     > Reading response...
+2020-04-16 15:22:11.970 http-nio-9898-exec-4 INFO     > Parsing response...
+2020-04-16 15:22:11.974 http-nio-9898-exec-4 REPLY    > 
+payerAuthValidateReply_authenticationStatusMessage=Success
+decision=ACCEPT
+merchantReferenceCode=Test-a973338c
+payerAuthValidateReply_commerceIndicator=vbv
+payerAuthValidateReply_reasonCode=100
+payerAuthValidateReply_cavvAlgorithm=x
+payerAuthValidateReply_eciRaw=05
+payerAuthValidateReply_eci=05
+payerAuthValidateReply_authenticationResult=0
+requestID=5870685314396995803008
+payerAuthValidateReply_paresStatus=x
+reasonCode=100
+requestToken=Axizxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx/RWS
+payerAuthValidateReply_xid=dzlYMW9YeFdWQzYxQmdJdmNiaTA=
+payerAuthValidateReply_cavv=AAABAWFlmQAAAABjRWWZEEFgFz+=
+payerAuthValidateReply_specificationVersion=xxxxx
+
+2020-04-16 15:22:11.975 http-nio-9898-exec-4 INFO     > Client, End of runTransaction Call   935ms
