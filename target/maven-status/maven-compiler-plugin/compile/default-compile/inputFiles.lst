@@ -8,6 +8,7 @@
 /Users/edilbertolopezubaldo/Projects/TwoFactorAuthentication.Service/src/main/java/com/conekta/tfa/service/model/Response.java
 /Users/edilbertolopezubaldo/Projects/TwoFactorAuthentication.Service/src/main/java/com/conekta/tfa/service/model/CardType.java
 /Users/edilbertolopezubaldo/Projects/TwoFactorAuthentication.Service/src/main/java/com/conekta/tfa/service/repository/IValidateRespository.java
+/Users/edilbertolopezubaldo/Projects/TwoFactorAuthentication.Service/src/main/java/com/conekta/tfa/service/configuration/DataSourceConfiguration.java
 /Users/edilbertolopezubaldo/Projects/TwoFactorAuthentication.Service/src/main/java/com/conekta/tfa/service/service/IGenerateJwtService.java
 /Users/edilbertolopezubaldo/Projects/TwoFactorAuthentication.Service/src/main/java/com/conekta/tfa/service/model/ValidateResponseModel.java
 /Users/edilbertolopezubaldo/Projects/TwoFactorAuthentication.Service/src/main/java/com/conekta/tfa/service/model/CheckEnrollResponseModel.java
