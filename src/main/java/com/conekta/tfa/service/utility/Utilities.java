@@ -32,6 +32,9 @@ public class Utilities {
 		CheckEnrollResponseModel checkEnrollResponse = new CheckEnrollResponseModel();
 		
 		if (cybersourceResponse != null && !referenceID.isEmpty()) {
+			checkEnrollResponse.idCheckenroll = UUID.randomUUID().toString();
+			checkEnrollResponse.referenceId = referenceID;
+			
 			checkEnrollResponse.commerceIndicator = (String) cybersourceResponse.get("payerAuthEnrollReply_commerceIndicator");
 			checkEnrollResponse.eciRaw = (String) cybersourceResponse.get("payerAuthEnrollReply_eciRaw");
 			checkEnrollResponse.cavv = (String) cybersourceResponse.get("payerAuthEnrollReply_cavv");
