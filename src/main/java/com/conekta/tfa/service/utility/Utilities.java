@@ -32,17 +32,22 @@ public class Utilities {
 		CheckEnrollResponseModel checkEnrollResponse = new CheckEnrollResponseModel();
 		
 		if (cybersourceResponse != null && !referenceID.isEmpty()) {
-			checkEnrollResponse.idCheckenroll = UUID.randomUUID().toString();
-			checkEnrollResponse.referenceId = referenceID;
+			checkEnrollResponse.commerceIndicator = (String) cybersourceResponse.get("payerAuthEnrollReply_commerceIndicator");
+			checkEnrollResponse.eciRaw = (String) cybersourceResponse.get("payerAuthEnrollReply_eciRaw");
+			checkEnrollResponse.cavv = (String) cybersourceResponse.get("payerAuthEnrollReply_cavv");
+			checkEnrollResponse.avv = (String) cybersourceResponse.get("payerAuthEnrollReply_avv");
+			checkEnrollResponse.authenticationResult = (String) cybersourceResponse.get("payerAuthEnrollReply_authenticationResult");
+			checkEnrollResponse.eci = (String) cybersourceResponse.get("payerAuthEnrollReply_eci");
+			checkEnrollResponse.authenticationStatusMessage = (String) cybersourceResponse.get("payerAuthEnrollReply_authenticationStatusMessage");
+			checkEnrollResponse.paresStatus = (String) cybersourceResponse.get("payerAuthEnrollReply_paresStatus");
 			checkEnrollResponse.proxyPan = (String) cybersourceResponse.get("payerAuthEnrollReply_proxyPAN");
-			checkEnrollResponse.decisio = (String) cybersourceResponse.get("decision");
+			checkEnrollResponse.decision = (String) cybersourceResponse.get("decision");
 			checkEnrollResponse.authenticationTransactionId = (String) cybersourceResponse.get("payerAuthEnrollReply_authenticationTransactionID");
 			checkEnrollResponse.merchantReferenceCode = (String) cybersourceResponse.get("merchantReferenceCode");
 			checkEnrollResponse.authenticationPath = (String) cybersourceResponse.get("payerAuthEnrollReply_authenticationPath");
 			checkEnrollResponse.veresEnrolled = (String) cybersourceResponse.get("payerAuthEnrollReply_veresEnrolled");
 			checkEnrollResponse.reasonCode = (String ) cybersourceResponse.get("payerAuthEnrollReply_reasonCode");
 			checkEnrollResponse.paReq = (String) cybersourceResponse.get("payerAuthEnrollReply_paReq");
-			// checkEnrollResponse.proofXML = (String) cybersourceResponse.get("payerAuthEnrollReply_proofXML");
 			checkEnrollResponse.requestId = (String) cybersourceResponse.get("requestID");
 			checkEnrollResponse.acsURL = (String) cybersourceResponse.get("payerAuthEnrollReply_acsURL");
 			checkEnrollResponse.requestToken = (String) cybersourceResponse.get("requestToken");

@@ -23,48 +23,68 @@ public class CheckEnrollResponseModel {
 	@Column(name = "referenceId", length = 50, nullable = false)
 	public String referenceId;
 	
-	@Column(name = "proxyPAN", length = 10, nullable = true)
+	@Column(name = "commerceIndicator", length = 50, nullable = true)
+	public String commerceIndicator; 
+	
+	@Column(name = "eciRaw", length = 20, nullable = true)
+	public String eciRaw; 
+	
+	@Column(name = "cavv", length = 100, nullable = true)
+	public String cavv; 
+	
+	@Column(name = "avv", length = 100, nullable = true)
+	public String avv; 
+	
+	@Column(name = "authenticationResult", length = 20, nullable = true)
+	public String authenticationResult; 
+	
+	@Column(name = "eci", length = 20, nullable = true)
+	public String eci; 
+	
+	@Column(name = "authenticationStatusMessage", length = 20, nullable = true)
+	public String authenticationStatusMessage;
+	
+	@Column(name = "paresStatus", length = 50, nullable = true)
+	public String paresStatus;
+	
+	@Column(name = "proxyPAN", length = 20, nullable = true)
 	public String proxyPan; 
 	
-	@Column(name = "decisio", length = 10, nullable = true)
-	public String decisio;        
+	@Column(name = "decision", length = 20, nullable = true)
+	public String decision;        
 	
-	@Column(name = "authenticationTransactionID", length = 50, nullable = true)
+	@Column(name = "authenticationTransactionID", length = 100, nullable = true)
 	public String authenticationTransactionId;
 	
-	@Column(name = "merchantReferenceCode", length = 50, nullable = true)
+	@Column(name = "merchantReferenceCode", length = 100, nullable = true)
 	public String merchantReferenceCode; 
 	
-	@Column(name = "authenticationPath", length = 10, nullable = true)
+	@Column(name = "authenticationPath", length = 20, nullable = true)
 	public String authenticationPath; 
 	
-	@Column(name = "veresEnrolled", length = 5, nullable = true)
+	@Column(name = "veresEnrolled", length = 10, nullable = true)
 	public String veresEnrolled; 
 	
-	@Column(name = "reasonCode", length = 5, nullable = true)
+	@Column(name = "reasonCode", length = 10, nullable = true)
 	public String reasonCode; 
 	
-	@Column(name = "paReq", length = 600, nullable = true)
+	@Column(name = "paReq", length = 1000, nullable = true)
 	public String paReq;
 	
-	@Column(name = "requestId", length = 50, nullable = true)
+	@Column(name = "requestId", length = 100, nullable = true)
 	public String requestId;
 	
-	@Column(name = "acsUrl", length = 2000, nullable = true)
+	@Column(name = "acsUrl", length = 3000, nullable = true)
 	public String acsURL;
 	
-	// @Column(name = "proofXml", length = 2000, nullable = true)
-	// public String proofXML;
-	
-	@Column(name = "requestToken", length = 100, nullable = true)
+	@Column(name = "requestToken", length = 200, nullable = true)
 	public String requestToken;
 	
-	@Column(name = "specificationVersion", length = 5, nullable = true)
+	@Column(name = "specificationVersion", length = 10, nullable = true)
 	public String specificationVersion;
 	
-	@Column(name = "xID", length = 50, nullable = true)
+	@Column(name = "xID", length = 100, nullable = true)
 	public String xID;
-	
 	@Temporal(TemporalType.TIMESTAMP)
 	private Date createDate = new Date();
 }
