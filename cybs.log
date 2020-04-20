@@ -468,3 +468,55 @@ reasonCode=100
 requestToken=AxjzxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxwQaR
 
 2020-04-20 14:39:09.864 http-nio-8080-exec-10 INFO     > Client, End of runTransaction Call   618ms
+
+2020-04-20 16:09:35.567 http-nio-8080-exec-4 TRANSTART> =======================================
+2020-04-20 16:09:35.571 http-nio-8080-exec-4 MERCHCFG > merchantID=conekta_7376961, keysDirectory=/Users/edilbertolopezubaldo/Projects/TwoFactorAuthentication.Service/, keyAlias=conekta_7376961, keyPassword=conekta_7376961, sendToProduction=true, sendToAkamai=false, targetAPIVersion=1.150, keyFilename=conekta_7376961.p12, serverURL=(null), namespaceURI=(null), enableLog=true, logDirectory=/Users/edilbertolopezubaldo/Projects/TwoFactorAuthentication.Service/, logFilename=(null), logMaximumSize=10, customHttpClass=(null), customHttpClassEnabled=false, useHttpClient=false, enableJdkCert=false, enableCacert=false, timeout=1000, useSignAndEncrypted=false, certificateCacheEnabled=true
+2020-04-20 16:09:35.716 http-nio-8080-exec-4 REQUEST  > 
+UUID   >  13dd028d-cb9f-4ed2-b21e-de170d7d9bd1
+Input request is
+======================================= 
+billTo_city=Santiago
+purchaseTotals_currency=MXN
+billTo_email=
+clientLibrary=Java Basic
+merchantReferenceCode=Test-055bab95
+billTo_country=MX
+billTo_lastName=xxxxx
+billTo_street1=xxxxxxx
+billTo_postalCode=52600
+clientLibraryVersion=6.2.7
+item_0_giftCategory=false
+payerAuthEnrollService_run=true
+payerAuthEnrollService_referenceID=Texxxxxxxxx95
+billTo_firstName=xxxxxxxxx
+billTo_state=Toluca
+card_expirationMonth=xx
+item_0_unitPrice=10.00
+merchantID=conekta_7376961
+clientEnvironment=Mac OS X/10.15.3/Oracle Corporation/13.0.2
+card_expirationYear=xxxx
+billTo_phoneNumber=
+card_accountNumber=4772xxxxxxxx8520
+
+2020-04-20 16:09:35.765 http-nio-8080-exec-4 INFO     > Client, End of soapWrap   199ms
+2020-04-20 16:09:35.800 http-nio-8080-exec-4 INFO     > Loading the certificate from p12 file 
+2020-04-20 16:09:36.596 http-nio-8080-exec-4 INFO     > Client, End of loading Merchant Certificates 830ms
+2020-04-20 16:09:36.598 http-nio-8080-exec-4 INFO     > Signing request...
+2020-04-20 16:09:41.856 http-nio-8080-exec-4 INFO     > Client, End of createSignedDoc   5261ms
+2020-04-20 16:09:41.858 http-nio-8080-exec-4 INFO     > Using HttpURLConnection for connections.
+2020-04-20 16:09:42.626 http-nio-8080-exec-4 INFO     > Sending 4180 bytes to https://ics2ws.ic3.com/commerce/1.x/transactionProcessor
+2020-04-20 16:09:42.628 http-nio-8080-exec-4 INFO     > Reading response...
+2020-04-20 16:09:43.073 http-nio-8080-exec-4 INFO     > Parsing response...
+2020-04-20 16:09:43.084 http-nio-8080-exec-4 REPLY    > 
+payerAuthEnrollReply_reasonCode=100
+decision=ACCEPT
+payerAuthEnrollReply_authenticationTransactionID=XeCAxxxxxxxxxxxxVJD1
+payerAuthEnrollReply_commerceIndicator=internet
+merchantReferenceCode=Test-055bab95
+requestID=5874169827246210303049
+payerAuthEnrollReply_veresEnrolled=x
+payerAuthEnrollReply_specificationVersion=xxxxx
+reasonCode=100
+requestToken=Axjzxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx5hVS
+
+2020-04-20 16:09:43.086 http-nio-8080-exec-4 INFO     > Client, End of runTransaction Call   7519ms
