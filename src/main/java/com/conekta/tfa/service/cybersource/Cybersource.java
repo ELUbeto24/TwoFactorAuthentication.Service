@@ -131,6 +131,7 @@ public class Cybersource {
 		    request.put( "card_accountNumber", checkEnrollRequest.cardAccountNumber ); // Mandatory parameter.
 			request.put( "card_expirationMonth", checkEnrollRequest.cardExpirationMonth ); // Mandatory parameter.
 			request.put( "card_expirationYear", checkEnrollRequest.cardExpirationYear ); // Mandatory parameter.
+			request.put( "card_cardType", checkEnrollRequest.cardType ); // Mandatory parameter.
 			request.put( "purchaseTotals_currency", checkEnrollRequest.totalsCurrency ); // Mandatory parameter.
 
 			request.put( "item_0_unitPrice", checkEnrollRequest.price ); // Mandatory parameter.

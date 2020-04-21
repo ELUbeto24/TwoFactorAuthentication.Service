@@ -38,7 +38,7 @@ public class Utilities {
 			checkEnrollResponse.commerceIndicator = (String) cybersourceResponse.get("payerAuthEnrollReply_commerceIndicator");
 			checkEnrollResponse.eciRaw = (String) cybersourceResponse.get("payerAuthEnrollReply_eciRaw");
 			checkEnrollResponse.cavv = (String) cybersourceResponse.get("payerAuthEnrollReply_cavv");
-			checkEnrollResponse.avv = (String) cybersourceResponse.get("payerAuthEnrollReply_avv");
+			checkEnrollResponse.avv = (String) cybersourceResponse.get("payerAuthEnrollReply_ucafAuthenticationData");
 			checkEnrollResponse.authenticationResult = (String) cybersourceResponse.get("payerAuthEnrollReply_authenticationResult");
 			checkEnrollResponse.eci = (String) cybersourceResponse.get("payerAuthEnrollReply_eci");
 			checkEnrollResponse.authenticationStatusMessage = (String) cybersourceResponse.get("payerAuthEnrollReply_authenticationStatusMessage");
@@ -85,7 +85,7 @@ public class Utilities {
 			validateResponse.requestToken = (String) cybersourceResponse.get("requestToken");
 			validateResponse.xID = (String) cybersourceResponse.get("payerAuthValidateReply_xid");
 			validateResponse.cavv = (String) cybersourceResponse.get("payerAuthValidateReply_cavv");
-			validateResponse.avv = (String) cybersourceResponse.get("payerAuthValidateReply_avv");
+			validateResponse.avv = (String) cybersourceResponse.get("payerAuthValidateReply_ucafAuthenticationData");
 			validateResponse.specificationVersion = (String) cybersourceResponse.get("payerAuthValidateReply_specificationVersion");
 		}
 		

@@ -21,4 +21,5 @@ public class CheckEnrollRequestModel {
 	public String totalsCurrency;
 	public String price;
 	public String giftCategory;
+	public String cardType;
 }

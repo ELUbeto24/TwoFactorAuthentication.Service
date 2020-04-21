@@ -35,22 +35,22 @@ public class CheckEnrollResponseModel {
 	@Column(name = "avv", length = 100, nullable = true)
 	public String avv; 
 	
-	@Column(name = "authenticationResult", length = 20, nullable = true)
+	@Column(name = "authenticationResult", length = 50, nullable = true)
 	public String authenticationResult; 
 	
 	@Column(name = "eci", length = 20, nullable = true)
 	public String eci; 
 	
-	@Column(name = "authenticationStatusMessage", length = 20, nullable = true)
+	@Column(name = "authenticationStatusMessage", length = 50, nullable = true)
 	public String authenticationStatusMessage;
 	
 	@Column(name = "paresStatus", length = 50, nullable = true)
 	public String paresStatus;
 	
-	@Column(name = "proxyPAN", length = 20, nullable = true)
+	@Column(name = "proxyPAN", length = 50, nullable = true)
 	public String proxyPan; 
 	
-	@Column(name = "decision", length = 20, nullable = true)
+	@Column(name = "decision", length = 50, nullable = true)
 	public String decision;        
 	
 	@Column(name = "authenticationTransactionID", length = 100, nullable = true)
@@ -59,7 +59,7 @@ public class CheckEnrollResponseModel {
 	@Column(name = "merchantReferenceCode", length = 100, nullable = true)
 	public String merchantReferenceCode; 
 	
-	@Column(name = "authenticationPath", length = 20, nullable = true)
+	@Column(name = "authenticationPath", length = 50, nullable = true)
 	public String authenticationPath; 
 	
 	@Column(name = "veresEnrolled", length = 10, nullable = true)
