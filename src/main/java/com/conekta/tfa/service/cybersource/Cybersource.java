@@ -4,8 +4,11 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.UUID;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 
+import com.conekta.tfa.service.TwoFactorAuthenticationApplication;
 import com.conekta.tfa.service.configuration.PropertySettings;
 import com.conekta.tfa.service.model.CheckEnrollRequestModel;
 import com.conekta.tfa.service.model.OrderModel;
@@ -38,7 +41,7 @@ import javax.crypto.spec.SecretKeySpec;
 
 @CybersourceAnnotation
 public class Cybersource {
-	//private static Logger LOG = LoggerFactory.getLogger(TwoFactorAuthenticationApplication.class);
+	private static Logger log = LoggerFactory.getLogger(TwoFactorAuthenticationApplication.class);
 	
 	@Autowired
 	private PropertySettings propertySettings;
@@ -132,6 +135,7 @@ public class Cybersource {
 			request.put( "card_expirationMonth", checkEnrollRequest.cardExpirationMonth ); // Mandatory parameter.
 			request.put( "card_expirationYear", checkEnrollRequest.cardExpirationYear ); // Mandatory parameter.
 			request.put( "card_cardType", checkEnrollRequest.cardType ); // Mandatory parameter.
+			log.info("CardType = " + checkEnrollRequest.cardType);
 			request.put( "purchaseTotals_currency", checkEnrollRequest.totalsCurrency ); // Mandatory parameter.
 
 			request.put( "item_0_unitPrice", checkEnrollRequest.price ); // Mandatory parameter.
@@ -177,7 +181,8 @@ public class Cybersource {
 			request.put( "card_accountNumber", validateRequest.cardAccountNumber ); // Mandatory parameter.
 			request.put( "card_expirationMonth", validateRequest.cardExpirationMonth ); // Mandatory parameter.
 			request.put( "card_expirationYear", validateRequest.cardExpirationYear ); // Mandatory parameter.
-			request.put( "card_cardType", validateRequest.cardCardType ); // Mandatory parameter.
+			request.put( "card_cardType", validateRequest.cardType ); // Mandatory parameter.
+			log.info("CardType = " + validateRequest.cardType);
 			request.put( "payerAuthValidateService_authenticationTransactionID",validateRequest.authenticationTransactionID ); // Mandatory parameter.
 
 			// The request is issued to cybersource by passing Map request and required properties.

@@ -4,13 +4,13 @@
       "name": "spring.datasource",
       "type": "org.springframework.boot.autoconfigure.jdbc.DataSourceProperties",
       "sourceType": "com.conekta.tfa.service.configuration.DataSourceConfiguration",
-      "sourceMethod": "public org.springframework.boot.autoconfigure.jdbc.DataSourceProperties appDataSourceProperties() "
+      "sourceMethod": "appDataSourceProperties()"
     },
     {
       "name": "spring.datasource.xa",
       "type": "org.springframework.boot.autoconfigure.jdbc.DataSourceProperties$Xa",
       "sourceType": "org.springframework.boot.autoconfigure.jdbc.DataSourceProperties",
-      "sourceMethod": "public org.springframework.boot.autoconfigure.jdbc.DataSourceProperties.Xa getXa() "
+      "sourceMethod": "getXa()"
     }
   ],
   "properties": [

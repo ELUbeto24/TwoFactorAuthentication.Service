@@ -43,10 +43,15 @@ public class ValidateServiceImpl implements IValidateService{
 		
 		/** The parameters that are required are validated.
 		 *  TypeValidate:
-		 *  1 = CheckEnroll
-		 *  2 = Validate 
+		 *  1 = GenerateJwt
+		 *  2 = CheckEnroll
+		 *  3 = Validate 
 		 */
-		if(utilities.validateRequiredParams(validateRequest, 2)) {
+		if(utilities.validateRequiredParams(validateRequest, 3)) {
+			
+			// card type evaluation
+			validateRequest.cardType =
+					utilities.evaluateCardType(validateRequest.cardAccountNumber);
 			
 			// The Validate method of cybersource is invoked to validate the user's token.
 			response = cybersource.Validate(validateRequest);

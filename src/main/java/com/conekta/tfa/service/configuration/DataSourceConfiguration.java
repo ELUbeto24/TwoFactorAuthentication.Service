@@ -5,8 +5,6 @@ import java.nio.ByteBuffer;
 import javax.annotation.Resource;
 import javax.sql.DataSource;
 
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 import org.springframework.boot.autoconfigure.jdbc.DataSourceProperties;
 import org.springframework.boot.configurationprocessor.json.JSONException;
 import org.springframework.boot.configurationprocessor.json.JSONObject;
@@ -24,14 +22,13 @@ import com.amazonaws.services.secretsmanager.model.GetSecretValueResult;
 import com.amazonaws.services.secretsmanager.model.InvalidParameterException;
 import com.amazonaws.services.secretsmanager.model.InvalidRequestException;
 import com.amazonaws.services.secretsmanager.model.ResourceNotFoundException;
-import com.conekta.tfa.service.TwoFactorAuthenticationApplication;
 
 @Configuration
 public class DataSourceConfiguration {
 	@Resource
     private Environment env;
 	
-	private static Logger log = LoggerFactory.getLogger(TwoFactorAuthenticationApplication.class);
+	//private static Logger log = LoggerFactory.getLogger(TwoFactorAuthenticationApplication.class);
 	
 	@Bean
     @Primary
@@ -43,7 +40,6 @@ public class DataSourceConfiguration {
 	@Bean
     @Primary
     public DataSource appDataSource() {
-    	log.info("ENTRO A SECRETS MANAGER");
 		
     	String secretName = env.getProperty("spring.aws.secretsmanager.secretName");
 		String endpoint = env.getProperty("spring.aws.secretsmanager.endpoint");
@@ -65,11 +61,11 @@ public class DataSourceConfiguration {
 			getSecretValueResponse = client.getSecretValue(getSecretValueRequest);
 
 		} catch(ResourceNotFoundException e) {
-			log.error("The requested secret " + secretName + " was not found");
+			// log.error("The requested secret " + secretName + " was not found");
 		} catch (InvalidRequestException e) {
-			log.error("The request was invalid due to: " + e.getMessage());
+			// log.error("The request was invalid due to: " + e.getMessage());
 		} catch (InvalidParameterException e) {
-			log.error("The request had invalid params: " + e.getMessage());
+			// log.error("The request had invalid params: " + e.getMessage());
 		}
 
 		if(getSecretValueResponse == null) {
