@@ -5,6 +5,7 @@ import java.util.UUID;
 
 import com.conekta.tfa.service.model.CheckEnrollRequestModel;
 import com.conekta.tfa.service.model.CheckEnrollResponseModel;
+import com.conekta.tfa.service.model.OrderDetailsModel;
 import com.conekta.tfa.service.model.ValidateAuthenticationRequestModel;
 import com.conekta.tfa.service.model.ValidateResponseModel;
 
@@ -34,15 +35,23 @@ public class Utilities {
 		if (cybersourceResponse != null && !referenceID.isEmpty()) {
 			checkEnrollResponse.idCheckenroll = UUID.randomUUID().toString();
 			checkEnrollResponse.referenceId = referenceID;
+			
+			checkEnrollResponse.commerceIndicator = (String) cybersourceResponse.get("payerAuthEnrollReply_commerceIndicator");
+			checkEnrollResponse.eciRaw = (String) cybersourceResponse.get("payerAuthEnrollReply_eciRaw");
+			checkEnrollResponse.cavv = (String) cybersourceResponse.get("payerAuthEnrollReply_cavv");
+			checkEnrollResponse.avv = (String) cybersourceResponse.get("payerAuthEnrollReply_ucafAuthenticationData");
+			checkEnrollResponse.authenticationResult = (String) cybersourceResponse.get("payerAuthEnrollReply_authenticationResult");
+			checkEnrollResponse.eci = (String) cybersourceResponse.get("payerAuthEnrollReply_eci");
+			checkEnrollResponse.authenticationStatusMessage = (String) cybersourceResponse.get("payerAuthEnrollReply_authenticationStatusMessage");
+			checkEnrollResponse.paresStatus = (String) cybersourceResponse.get("payerAuthEnrollReply_paresStatus");
 			checkEnrollResponse.proxyPan = (String) cybersourceResponse.get("payerAuthEnrollReply_proxyPAN");
-			checkEnrollResponse.decisio = (String) cybersourceResponse.get("decision");
+			checkEnrollResponse.decision = (String) cybersourceResponse.get("decision");
 			checkEnrollResponse.authenticationTransactionId = (String) cybersourceResponse.get("payerAuthEnrollReply_authenticationTransactionID");
 			checkEnrollResponse.merchantReferenceCode = (String) cybersourceResponse.get("merchantReferenceCode");
 			checkEnrollResponse.authenticationPath = (String) cybersourceResponse.get("payerAuthEnrollReply_authenticationPath");
 			checkEnrollResponse.veresEnrolled = (String) cybersourceResponse.get("payerAuthEnrollReply_veresEnrolled");
 			checkEnrollResponse.reasonCode = (String ) cybersourceResponse.get("payerAuthEnrollReply_reasonCode");
 			checkEnrollResponse.paReq = (String) cybersourceResponse.get("payerAuthEnrollReply_paReq");
-			// checkEnrollResponse.proofXML = (String) cybersourceResponse.get("payerAuthEnrollReply_proofXML");
 			checkEnrollResponse.requestId = (String) cybersourceResponse.get("requestID");
 			checkEnrollResponse.acsURL = (String) cybersourceResponse.get("payerAuthEnrollReply_acsURL");
 			checkEnrollResponse.requestToken = (String) cybersourceResponse.get("requestToken");
@@ -77,7 +86,7 @@ public class Utilities {
 			validateResponse.requestToken = (String) cybersourceResponse.get("requestToken");
 			validateResponse.xID = (String) cybersourceResponse.get("payerAuthValidateReply_xid");
 			validateResponse.cavv = (String) cybersourceResponse.get("payerAuthValidateReply_cavv");
-			validateResponse.avv = (String) cybersourceResponse.get("payerAuthValidateReply_avv");
+			validateResponse.avv = (String) cybersourceResponse.get("payerAuthValidateReply_ucafAuthenticationData");
 			validateResponse.specificationVersion = (String) cybersourceResponse.get("payerAuthValidateReply_specificationVersion");
 		}
 		
@@ -91,50 +100,104 @@ public class Utilities {
 	 */
 	public Boolean validateRequiredParams(Object objectRequest, Integer typeValidate) {
 		// 
-		// CheckEnrollRequest validation.
-		if(typeValidate == 1) {
+		int statusCardNumber = 0;
+		int statusExpMonth = 0;
+		int statusExpYear = 0;
+		int statusPrice = 0;
+		int statusCurrency = 0;
+		
+		switch (typeValidate) {
+		case 1:
+			// Generate JWT validation.
+			OrderDetailsModel validateOrderRequest = new OrderDetailsModel();
+			validateOrderRequest = (OrderDetailsModel)objectRequest;
+			
+			int statusOrderNumber = validateOrderRequest.OrderNumber.length();
+			int statusAmount = validateOrderRequest.Amount.length();
+			
+			if (statusOrderNumber == 0 || statusAmount == 0) {
+				return false;
+			}
+			
+			break;
+			
+		case 2:
+			
+			// CheckEnrollRequest validation.
 			CheckEnrollRequestModel checkEnrollRequest = new CheckEnrollRequestModel();
 			checkEnrollRequest = (CheckEnrollRequestModel)objectRequest;
 			
-			boolean statusMerchantRefCode = checkEnrollRequest.merchantReferenceCode.isBlank(); // Mandatory parameter.
-			boolean statusReferenceID = checkEnrollRequest.referenceID.isBlank(); // Mandatory parameter.
-			boolean statusPrice = checkEnrollRequest.price.isBlank(); // Mandatory parameter.
-			boolean statusCurrency = checkEnrollRequest.totalsCurrency.isBlank(); // Mandatory parameter.
-			boolean statusCardNumber = checkEnrollRequest.cardAccountNumber.isBlank(); // Mandatory parameter.
-			boolean statusExpMonth = checkEnrollRequest.cardExpirationMonth.isBlank(); // Mandatory parameter.  
-			boolean statusExpYear = checkEnrollRequest.cardExpirationYear.isBlank(); // Mandatory parameter.
-			boolean statusGiftCategory = checkEnrollRequest.giftCategory.isBlank(); // Mandatory parameter.
+			int statusMerchantRefCode = checkEnrollRequest.merchantReferenceCode.length(); // Mandatory parameter.
+			int statusReferenceID = checkEnrollRequest.referenceID.length(); // Mandatory parameter.
 			
-			if(statusMerchantRefCode || statusReferenceID ||
-					statusPrice || statusCurrency ||
-						statusCardNumber || statusExpMonth ||
-							statusExpYear || statusGiftCategory) {
+			statusPrice = checkEnrollRequest.price.length(); // Mandatory parameter.
+			statusCurrency = checkEnrollRequest.totalsCurrency.length(); // Mandatory parameter.
+			statusCardNumber = checkEnrollRequest.cardAccountNumber.length(); // Mandatory parameter.
+			statusExpMonth = checkEnrollRequest.cardExpirationMonth.length(); // Mandatory parameter.  
+			statusExpYear = checkEnrollRequest.cardExpirationYear.length(); // Mandatory parameter.
+			
+			int statusGiftCategory = checkEnrollRequest.giftCategory.length(); // Mandatory parameter.
+			
+			if(statusMerchantRefCode == 0 || statusReferenceID == 0 ||
+					statusPrice == 0 || statusCurrency == 0 ||
+						statusCardNumber == 0  || statusExpMonth == 0  ||
+							statusExpYear == 0  || statusGiftCategory == 0 ) {
 				return false;
 			}
-		}else {
+			
+			break;
+			
+		case 3:
 
 			// ValidateRequest validation.
 			ValidateAuthenticationRequestModel validateRequest = new ValidateAuthenticationRequestModel();
 			validateRequest = (ValidateAuthenticationRequestModel)objectRequest;
 			
-			boolean statusCardNumber = validateRequest.cardAccountNumber.isBlank(); // Mandatory parameter.
-			boolean statusExpMonth = validateRequest.cardExpirationMonth.isBlank(); // Mandatory parameter.  
-			boolean statusExpYear = validateRequest.cardExpirationYear.isBlank(); // Mandatory parameter.
-			boolean statusRefCode = validateRequest.merchantReferenceCode.isBlank(); // Mandatory parameter.
-			boolean statusPrice = validateRequest.unitPrice.isBlank(); // Mandatory parameter.
-			boolean statusCurrency = validateRequest.currency.isBlank(); // Mandatory parameter.
-			boolean statusCardType = validateRequest.cardCardType.isBlank(); // Mandatory parameter.
-			boolean statusTranId = validateRequest.authenticationTransactionID.isBlank(); // Mandatory parameter.
+		    statusCardNumber = validateRequest.cardAccountNumber.length(); // Mandatory parameter.
+			statusExpMonth = validateRequest.cardExpirationMonth.length(); // Mandatory parameter.  
+			statusExpYear = validateRequest.cardExpirationYear.length(); // Mandatory parameter.
+			statusPrice = validateRequest.unitPrice.length(); // Mandatory parameter.
+			statusCurrency = validateRequest.currency.length(); // Mandatory parameter.
+			
+			int statusRefCode = validateRequest.merchantReferenceCode.length(); // Mandatory parameter.
+			int statusTranId = validateRequest.authenticationTransactionID.length(); // Mandatory parameter.
 			
 			// If one of the parameters is blank, it will not be able 
 			// to continue the request and will return a false value.
-			if(statusCardNumber || statusExpMonth || 
-					statusExpYear || statusRefCode ||
-						statusPrice || statusCurrency ||
-							statusCardType || statusTranId) {
+			if(statusCardNumber == 0 || statusExpMonth == 0 || 
+					statusExpYear == 0 || statusRefCode == 0 ||
+						statusPrice == 0 || statusCurrency == 0 ||
+							statusTranId == 0) {
 				return false;
 			}
+			
+			break;
+			
+		default:
+			break;
 		}
+		
 		return true;
+	}
+	
+	public String evaluateCardType(String cardNumber) {
+		cardNumber = cardNumber.substring( 0, 1 );
+		String cardType = null;
+		
+		switch (cardNumber) {
+		case "4":
+			cardType = "001";
+			break;
+		case "5":	
+			cardType = "002";
+			break;
+		case "3":
+			cardType = "003";
+			break;
+		default:
+			break;
+		}
+		
+		return cardType;
 	}
 }

@@ -5,6 +5,7 @@ import org.springframework.stereotype.Service;
 
 import com.conekta.tfa.service.cybersource.Cybersource;
 import com.conekta.tfa.service.model.OrderModel;
+import com.conekta.tfa.service.utility.Utilities;
 
 /**
 * <h1>Generate JWT Service Class</h1>
@@ -18,6 +19,8 @@ import com.conekta.tfa.service.model.OrderModel;
 
 @Service
 public class GenerateJwtServiceImpl implements IGenerateJwtService{
+	@Autowired
+	Utilities utilities;
 	
 	@Autowired
 	private Cybersource cybersource;
@@ -28,9 +31,19 @@ public class GenerateJwtServiceImpl implements IGenerateJwtService{
 	 */
 	@Override
 	public String createJwt(OrderModel order) {
-		
-		// The Validate method of cybersource is invoked to generate JWT that will allow requests to cybersource.
-		String responseJwt = cybersource.createJWT(order);
+		String responseJwt = null;
+		/** The parameters that are required are validated.
+		 *  TypeValidate:
+		 *  1 = GenerateJwt
+		 *  2 = CheckEnroll
+		 *  3 = Validate 
+		 */
+		if (utilities.validateRequiredParams(order.orderDetails, 1)) {
+			// The Validate method of cybersource is invoked to generate JWT that will allow requests to cybersource.
+			responseJwt = cybersource.createJWT(order);
+		}else {
+			responseJwt = "Parameters are missing";
+		}
 		
 		return responseJwt;
 	}

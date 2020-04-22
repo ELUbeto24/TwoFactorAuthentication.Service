@@ -10,7 +10,7 @@ public class ValidateAuthenticationRequestModel {
 	public String cardExpirationMonth;
 	public String cardExpirationYear;
 	public String cardAccountNumber;
-	public String cardCardType;
+	public String cardType;
 	public String authenticationTransactionID;
 	
 }

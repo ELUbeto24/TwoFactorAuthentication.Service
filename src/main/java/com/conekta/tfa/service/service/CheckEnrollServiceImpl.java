@@ -44,10 +44,16 @@ public class CheckEnrollServiceImpl implements ICheckEnrollService {
 		
 		/** The parameters that are required are validated.
 		 *  TypeValidate:
-		 *  1 = CheckEnroll
-		 *  2 = Validate 
+		 *  1 = GenerateJwt
+		 *  2 = CheckEnroll
+		 *  3 = Validate 
 		 */
-		if(utilities.validateRequiredParams(checkEnrollRequest, 1)) {
+		if(utilities.validateRequiredParams(checkEnrollRequest, 2)) {
+			
+			// card type evaluation
+			checkEnrollRequest.cardType = 
+					utilities.evaluateCardType(checkEnrollRequest.cardAccountNumber);
+			
 			// The cybersource CheckEnroll method is invoked to validate that the card is rolled with 3D-S.
 			response = cybersource.CheckEnroll(checkEnrollRequest);
 			
