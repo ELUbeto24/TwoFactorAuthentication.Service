@@ -4,6 +4,6 @@ COPY "./target/TwoFactorAuthentication.Service-0.0.1-SNAPSHOT.jar" "2fa-service.
 EXPOSE 9595
 
 COPY ./tfa.properties .
-COPY ./conekta_7376961.p12 .
+COPY ./conekta_7504739.p12 .
 
 ENTRYPOINT ["java","-jar","2fa-service.jar"]
