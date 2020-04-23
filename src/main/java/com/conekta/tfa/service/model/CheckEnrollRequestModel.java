@@ -1,6 +1,6 @@
 package com.conekta.tfa.service.model;
 
-public class CheckEnrollRequestModel {
+public class CheckEnrollRequestModel extends AdditionalParameterModel{
 	public String merchantReferenceCode;
 	public String enrollServiceRun;
 	public String referenceID;
@@ -15,11 +15,8 @@ public class CheckEnrollRequestModel {
 	public String email;
 	public String phoneNumber;
 	
-	public String cardAccountNumber;
-	public String cardExpirationMonth;
-	public String cardExpirationYear;
+	public CardModel cardModel;
 	public String totalsCurrency;
 	public String price;
 	public String giftCategory;
-	public String cardType;
 }

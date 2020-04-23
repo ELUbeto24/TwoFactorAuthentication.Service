@@ -128,14 +128,27 @@ public class Cybersource {
 			request.put( "billTo_email", checkEnrollRequest.email ); // Optional parameter.
 			request.put( "billTo_phoneNumber", checkEnrollRequest.phoneNumber ); // Optional parameter.
 			
-		    request.put( "card_accountNumber", checkEnrollRequest.cardAccountNumber ); // Mandatory parameter.
-			request.put( "card_expirationMonth", checkEnrollRequest.cardExpirationMonth ); // Mandatory parameter.
-			request.put( "card_expirationYear", checkEnrollRequest.cardExpirationYear ); // Mandatory parameter.
-			request.put( "card_cardType", checkEnrollRequest.cardType ); // Mandatory parameter.
+		    request.put( "card_accountNumber", checkEnrollRequest.cardModel.cardAccountNumber ); // Mandatory parameter.
+			request.put( "card_expirationMonth", checkEnrollRequest.cardModel.cardExpirationMonth ); // Mandatory parameter.
+			request.put( "card_expirationYear", checkEnrollRequest.cardModel.cardExpirationYear ); // Mandatory parameter.
+			request.put( "card_cardType", checkEnrollRequest.cardModel.cardType ); // Mandatory parameter.
 			request.put( "purchaseTotals_currency", checkEnrollRequest.totalsCurrency ); // Mandatory parameter.
 
 			request.put( "item_0_unitPrice", checkEnrollRequest.price ); // Mandatory parameter.
 			request.put( "item_0_giftCategory", checkEnrollRequest.giftCategory ); // Mandatory parameter.
+			
+			// Additional Mandatory Fields
+			request.put( "payerAuthEnrollService_MCC", checkEnrollRequest.serviceMcc ); // Mandatory parameter.
+			request.put( "payerAuthEnrollService_acquirerBin", checkEnrollRequest.serviceAcquirerBin ); // Mandatory parameter.
+			request.put( "payerAuthEnrollService_loginID", checkEnrollRequest.serviceLoginID ); // Mandatory parameter.
+			request.put( "payerAuthEnrollService_countryCode", checkEnrollRequest.serviceCountryCode ); // Mandatory parameter.
+			request.put( "payerAuthEnrollService_merchantName", checkEnrollRequest.serviceMerchantName ); // Mandatory parameter.
+			request.put( "payerAuthEnrollService_merchantID", checkEnrollRequest.serviceMerchantID ); // Mandatory parameter.
+			request.put( "payerAuthEnrollService_merchantURL", checkEnrollRequest.serviceMerchantURL ); // Mandatory parameter.
+			request.put( "payerAuthEnrollService_requestorID", checkEnrollRequest.serviceRequestorID ); // Mandatory parameter.
+			request.put( "payerAuthEnrollService_requestorName", checkEnrollRequest.serviceRequestorName ); // Mandatory parameter.
+			request.put( "payerAuthEnrollService_mobilePhone", checkEnrollRequest.serviceMobilePhone ); // Mandatory parameter.
+			request.put( "payerAuthEnrollService_productCode", checkEnrollRequest.serviceProductCode ); // Mandatory parameter.
 			
 			// The request is issued to cybersource by passing Map request and required properties.
 			Map<?, ?> responseCybersource = Client.runTransaction(request, propertySettings.readProperties());
@@ -174,12 +187,24 @@ public class Cybersource {
 			request.put( "merchantReferenceCode", validateRequest.merchantReferenceCode ); // Mandatory parameter.
 			request.put( "purchaseTotals_grandTotalAmount", validateRequest.unitPrice ); // Mandatory parameter.
 			request.put( "purchaseTotals_currency", validateRequest.currency ); // Mandatory parameter.
-			request.put( "card_accountNumber", validateRequest.cardAccountNumber ); // Mandatory parameter.
-			request.put( "card_expirationMonth", validateRequest.cardExpirationMonth ); // Mandatory parameter.
-			request.put( "card_expirationYear", validateRequest.cardExpirationYear ); // Mandatory parameter.
-			request.put( "card_cardType", validateRequest.cardType ); // Mandatory parameter.
+			request.put( "card_accountNumber", validateRequest.cardModel.cardAccountNumber ); // Mandatory parameter.
+			request.put( "card_expirationMonth", validateRequest.cardModel.cardExpirationMonth ); // Mandatory parameter.
+			request.put( "card_expirationYear", validateRequest.cardModel.cardExpirationYear ); // Mandatory parameter.
+			request.put( "card_cardType", validateRequest.cardModel.cardType ); // Mandatory parameter.
 			request.put( "payerAuthValidateService_authenticationTransactionID",validateRequest.authenticationTransactionID ); // Mandatory parameter.
-
+			// Additional Mandatory Fields
+						request.put( "payerAuthEnrollService_MCC", validateRequest.serviceMcc ); // Mandatory parameter.
+						request.put( "payerAuthEnrollService_acquirerBin", validateRequest.serviceAcquirerBin ); // Mandatory parameter.
+						request.put( "payerAuthEnrollService_loginID", validateRequest.serviceLoginID ); // Mandatory parameter.
+						request.put( "payerAuthEnrollService_countryCode", validateRequest.serviceCountryCode ); // Mandatory parameter.
+						request.put( "payerAuthEnrollService_merchantName", validateRequest.serviceMerchantName ); // Mandatory parameter.
+						request.put( "payerAuthEnrollService_merchantID", validateRequest.serviceMerchantID ); // Mandatory parameter.
+						request.put( "payerAuthEnrollService_merchantURL", validateRequest.serviceMerchantURL ); // Mandatory parameter.
+						request.put( "payerAuthEnrollService_requestorID", validateRequest.serviceRequestorID ); // Mandatory parameter.
+						request.put( "payerAuthEnrollService_requestorName", validateRequest.serviceRequestorName ); // Mandatory parameter.
+						request.put( "payerAuthEnrollService_mobilePhone", validateRequest.serviceMobilePhone ); // Mandatory parameter.
+						request.put( "payerAuthEnrollService_productCode", validateRequest.serviceProductCode ); // Mandatory parameter.
+						
 			// The request is issued to cybersource by passing Map request and required properties.
 			Map<?, ?> responseValidate  = Client.runTransaction(request, propertySettings.readProperties());
 			
