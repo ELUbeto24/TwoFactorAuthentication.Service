@@ -180,18 +180,22 @@ public class Utilities {
 		return true;
 	}
 	
+	/** The parameters that are required are Evaluate Card Type.
+	 * @param String cardNumber.
+	 * @return return String Response.
+	 */
 	public String evaluateCardType(String cardNumber) {
 		cardNumber = cardNumber.substring( 0, 1 );
 		String cardType = null;
 		
 		switch (cardNumber) {
-		case "4":
+		case "4": // Type Card = Visa
 			cardType = "001";
 			break;
-		case "5":	
+		case "5": // Type Card = Master Card
 			cardType = "002";
 			break;
-		case "3":
+		case "3": // Type Card = American Express
 			cardType = "003";
 			break;
 		default:
