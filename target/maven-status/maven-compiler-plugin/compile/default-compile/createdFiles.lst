@@ -11,8 +11,10 @@ com/conekta/tfa/service/utility/Utilities.class
 META-INF/spring-configuration-metadata.json
 com/conekta/tfa/service/cybersource/CybersourceAnnotation.class
 com/conekta/tfa/service/model/CheckEnrollRequestModel.class
+com/conekta/tfa/service/model/CardModel.class
 com/conekta/tfa/service/service/ValidateServiceImpl.class
 com/conekta/tfa/service/repository/IValidateRespository.class
+com/conekta/tfa/service/model/AdditionalParameterModel.class
 com/conekta/tfa/service/cybersource/Cybersource.class
 com/conekta/tfa/service/configuration/DataSourceConfiguration.class
 com/conekta/tfa/service/model/Response.class
@@ -21,5 +23,4 @@ com/conekta/tfa/service/TwoFactorAuthenticationApplication.class
 com/conekta/tfa/service/repository/ICheckEnrollRepository.class
 com/conekta/tfa/service/utility/UtilitiesAnnotation.class
 com/conekta/tfa/service/model/ValidateResponseModel.class
-com/conekta/tfa/service/model/CardType.class
 com/conekta/tfa/service/service/GenerateJwtServiceImpl.class

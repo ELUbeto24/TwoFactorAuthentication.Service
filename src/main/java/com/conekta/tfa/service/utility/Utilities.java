@@ -131,10 +131,10 @@ public class Utilities {
 			int statusReferenceID = checkEnrollRequest.referenceID.length(); // Mandatory parameter.
 			
 			statusPrice = checkEnrollRequest.price.length(); // Mandatory parameter.
-			statusCurrency = checkEnrollRequest.totalsCurrency.length(); // Mandatory parameter.
-			statusCardNumber = checkEnrollRequest.cardAccountNumber.length(); // Mandatory parameter.
-			statusExpMonth = checkEnrollRequest.cardExpirationMonth.length(); // Mandatory parameter.  
-			statusExpYear = checkEnrollRequest.cardExpirationYear.length(); // Mandatory parameter.
+			statusCurrency = checkEnrollRequest.cardModel.currency.length(); // Mandatory parameter.
+			statusCardNumber = checkEnrollRequest.cardModel.cardAccountNumber.length(); // Mandatory parameter.
+			statusExpMonth = checkEnrollRequest.cardModel.cardExpirationMonth.length(); // Mandatory parameter.  
+			statusExpYear = checkEnrollRequest.cardModel.cardExpirationYear.length(); // Mandatory parameter.
 			
 			int statusGiftCategory = checkEnrollRequest.giftCategory.length(); // Mandatory parameter.
 			
@@ -153,11 +153,11 @@ public class Utilities {
 			ValidateAuthenticationRequestModel validateRequest = new ValidateAuthenticationRequestModel();
 			validateRequest = (ValidateAuthenticationRequestModel)objectRequest;
 			
-		    statusCardNumber = validateRequest.cardAccountNumber.length(); // Mandatory parameter.
-			statusExpMonth = validateRequest.cardExpirationMonth.length(); // Mandatory parameter.  
-			statusExpYear = validateRequest.cardExpirationYear.length(); // Mandatory parameter.
+		    statusCardNumber = validateRequest.cardModel.cardAccountNumber.length(); // Mandatory parameter.
+			statusExpMonth = validateRequest.cardModel.cardExpirationMonth.length(); // Mandatory parameter.  
+			statusExpYear = validateRequest.cardModel.cardExpirationYear.length(); // Mandatory parameter.
 			statusPrice = validateRequest.unitPrice.length(); // Mandatory parameter.
-			statusCurrency = validateRequest.currency.length(); // Mandatory parameter.
+			statusCurrency = validateRequest.cardModel.currency.length(); // Mandatory parameter.
 			
 			int statusRefCode = validateRequest.merchantReferenceCode.length(); // Mandatory parameter.
 			int statusTranId = validateRequest.authenticationTransactionID.length(); // Mandatory parameter.
@@ -180,18 +180,22 @@ public class Utilities {
 		return true;
 	}
 	
+	/** The parameters that are required are Evaluate Card Type.
+	 * @param String cardNumber.
+	 * @return return String Response.
+	 */
 	public String evaluateCardType(String cardNumber) {
 		cardNumber = cardNumber.substring( 0, 1 );
 		String cardType = null;
 		
 		switch (cardNumber) {
-		case "4":
+		case "4": // Type Card = Visa
 			cardType = "001";
 			break;
-		case "5":	
+		case "5": // Type Card = Master Card
 			cardType = "002";
 			break;
-		case "3":
+		case "3": // Type Card = American Express
 			cardType = "003";
 			break;
 		default:
