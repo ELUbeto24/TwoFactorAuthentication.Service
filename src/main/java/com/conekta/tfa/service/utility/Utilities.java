@@ -3,6 +3,10 @@ package com.conekta.tfa.service.utility;
 import java.util.Map;
 import java.util.UUID;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
+import com.conekta.tfa.service.TwoFactorAuthenticationApplication;
 import com.conekta.tfa.service.model.CheckEnrollRequestModel;
 import com.conekta.tfa.service.model.CheckEnrollResponseModel;
 import com.conekta.tfa.service.model.OrderDetailsModel;
@@ -22,7 +26,7 @@ import com.conekta.tfa.service.model.ValidateResponseModel;
 @UtilitiesAnnotation
 public class Utilities {
 	
-	//private static Logger LOG = LoggerFactory.getLogger(TwoFactorAuthenticationApplication.class);
+	private static Logger log = LoggerFactory.getLogger(TwoFactorAuthenticationApplication.class);
 	
 	/** Convert the response from cybersource to CheckEnroll model.
 	 * @param String referenceID.
@@ -203,5 +207,84 @@ public class Utilities {
 		}
 		
 		return cardType;
+	}
+	
+	public void mapObject(Object objMap, Integer tipoObjeto) {
+		if(tipoObjeto == 1) {
+			CheckEnrollRequestModel checkEnrollRequest = new CheckEnrollRequestModel();
+			checkEnrollRequest = (CheckEnrollRequestModel)objMap;
+			
+			log.info("-- Map CheckEnroll --");
+			
+			log.info("merchantReferenceCode : " + checkEnrollRequest.merchantReferenceCode);
+			log.info("enrollServiceRun : " + checkEnrollRequest.enrollServiceRun);
+			log.info("referenceID : " + checkEnrollRequest.referenceID);
+			
+			log.info("firstName : " + checkEnrollRequest.firstName);
+			log.info("lastName : " + checkEnrollRequest.lastName);
+			log.info("street : " + checkEnrollRequest.street);
+			log.info("city : " + checkEnrollRequest.city);
+			log.info("postalCode : " + checkEnrollRequest.postalCode);
+			log.info("state : " + checkEnrollRequest.state);
+			log.info("country : " + checkEnrollRequest.country);
+			log.info("email : " + checkEnrollRequest.email);
+			log.info("phoneNumber : " + checkEnrollRequest.phoneNumber);
+			
+			log.info("-- Card Model --");
+			
+			log.info("cardAccountNumber : " + checkEnrollRequest.cardModel.cardAccountNumber);
+			log.info("cardExpirationMonth : " + checkEnrollRequest.cardModel.cardExpirationMonth);
+			log.info("cardExpirationYear : " + checkEnrollRequest.cardModel.cardExpirationYear);
+			log.info("cardType : " + checkEnrollRequest.cardModel.cardType);
+			log.info("currency : " + checkEnrollRequest.cardModel.currency);
+			
+			log.info("price : " + checkEnrollRequest.price);
+			log.info("giftCategory : " + checkEnrollRequest.giftCategory);
+			
+			
+			log.info("-- Additional Parameter --");
+			log.info("serviceMcc : " + checkEnrollRequest.additionalParameterModel.serviceMcc );
+			log.info("serviceAcquirerBin : " + checkEnrollRequest.additionalParameterModel.serviceAcquirerBin );
+			log.info("serviceLoginID : " + checkEnrollRequest.additionalParameterModel.serviceLoginID );
+			log.info("serviceCountryCode : " + checkEnrollRequest.additionalParameterModel.serviceCountryCode );
+			log.info("serviceMerchantName : " + checkEnrollRequest.additionalParameterModel.serviceMerchantName );
+			log.info("serviceMerchantID : " + checkEnrollRequest.additionalParameterModel.serviceMerchantID );
+			log.info("serviceMerchantURL : " + checkEnrollRequest.additionalParameterModel.serviceMerchantURL );
+			log.info("serviceRequestorID : " + checkEnrollRequest.additionalParameterModel.serviceRequestorID );
+			log.info("serviceRequestorName : " + checkEnrollRequest.additionalParameterModel.serviceRequestorName );
+			log.info("serviceMobilePhone : " + checkEnrollRequest.additionalParameterModel.serviceMobilePhone );
+			log.info("serviceProductCode : " + checkEnrollRequest.additionalParameterModel.serviceProductCode );
+			
+			
+		}else {
+			ValidateAuthenticationRequestModel validateRequest = new ValidateAuthenticationRequestModel();
+			validateRequest = (ValidateAuthenticationRequestModel)objMap;
+			
+			log.info("-- Map Validate --");
+			log.info("payerAuthValidateServiceRun" + validateRequest.payerAuthValidateServiceRun);
+			log.info("merchantReferenceCode" + validateRequest.merchantReferenceCode);
+			log.info("unitPrice" + validateRequest.unitPrice);
+			log.info("currency" + validateRequest.cardModel.currency);
+			
+			log.info("-- Card Model --");
+			log.info("cardAccountNumber" + validateRequest.cardModel.cardAccountNumber);
+			log.info("cardExpirationMonth" + validateRequest.cardModel.cardExpirationMonth);
+			log.info("cardExpirationYear" + validateRequest.cardModel.cardExpirationYear);
+			log.info("payerAuthValidateServiceRun" + validateRequest.cardModel.cardType);
+			log.info("authenticationTransactionID" + validateRequest.authenticationTransactionID);
+			
+			log.info("-- Additional Parameter --");
+			log.info("serviceMcc" + validateRequest.additionalParameterModel.serviceMcc);
+			log.info("serviceAcquirerBin" + validateRequest.additionalParameterModel.serviceAcquirerBin);
+			log.info("serviceLoginID" + validateRequest.additionalParameterModel.serviceLoginID);
+			log.info("serviceCountryCode" + validateRequest.additionalParameterModel.serviceCountryCode);
+			log.info("serviceMerchantName" + validateRequest.additionalParameterModel.serviceMerchantName);
+			log.info("serviceMerchantID" + validateRequest.additionalParameterModel.serviceMerchantID);
+			log.info("serviceMerchantURL" + validateRequest.additionalParameterModel.serviceMerchantURL);
+			log.info("serviceRequestorID" + validateRequest.additionalParameterModel.serviceRequestorID);
+			log.info("serviceRequestorName" + validateRequest.additionalParameterModel.serviceRequestorName);
+			log.info("serviceMobilePhone" + validateRequest.additionalParameterModel.serviceMobilePhone);
+			log.info("serviceProductCode" + validateRequest.additionalParameterModel.serviceProductCode);
+		}
 	}
 }
