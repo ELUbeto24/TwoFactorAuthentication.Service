@@ -38,11 +38,8 @@ import javax.crypto.spec.SecretKeySpec;
 
 @CybersourceAnnotation
 public class Cybersource {
-<<<<<<< HEAD
+
 	// private static Logger log = LoggerFactory.getLogger(TwoFactorAuthenticationApplication.class);
-=======
-	//private static Logger log = LoggerFactory.getLogger(TwoFactorAuthenticationApplication.class);
->>>>>>> dev
 	
 	@Autowired
 	private PropertySettings propertySettings;
@@ -132,19 +129,11 @@ public class Cybersource {
 			request.put( "billTo_email", checkEnrollRequest.email ); // Optional parameter.
 			request.put( "billTo_phoneNumber", checkEnrollRequest.phoneNumber ); // Optional parameter.
 			
-<<<<<<< HEAD
-		    request.put( "card_accountNumber", checkEnrollRequest.cardAccountNumber ); // Mandatory parameter.
-			request.put( "card_expirationMonth", checkEnrollRequest.cardExpirationMonth ); // Mandatory parameter.
-			request.put( "card_expirationYear", checkEnrollRequest.cardExpirationYear ); // Mandatory parameter.
-			request.put( "card_cardType", checkEnrollRequest.cardType ); // Mandatory parameter.
-			request.put( "purchaseTotals_currency", checkEnrollRequest.totalsCurrency ); // Mandatory parameter.
-=======
 		    request.put( "card_accountNumber", checkEnrollRequest.cardModel.cardAccountNumber ); // Mandatory parameter.
 			request.put( "card_expirationMonth", checkEnrollRequest.cardModel.cardExpirationMonth ); // Mandatory parameter.
 			request.put( "card_expirationYear", checkEnrollRequest.cardModel.cardExpirationYear ); // Mandatory parameter.
 			request.put( "card_cardType", checkEnrollRequest.cardModel.cardType ); // Mandatory parameter.
 			request.put( "purchaseTotals_currency", checkEnrollRequest.cardModel.currency ); // Mandatory parameter.
->>>>>>> dev
 
 			request.put( "item_0_unitPrice", checkEnrollRequest.price ); // Mandatory parameter.
 			request.put( "item_0_giftCategory", checkEnrollRequest.giftCategory ); // Mandatory parameter.
@@ -209,19 +198,13 @@ public class Cybersource {
 			request.put( "merchantID", propertySettings.getProperty("merchantID") ); // Mandatory parameter.
 			request.put( "merchantReferenceCode", validateRequest.merchantReferenceCode ); // Mandatory parameter.
 			request.put( "purchaseTotals_grandTotalAmount", validateRequest.unitPrice ); // Mandatory parameter.
-<<<<<<< HEAD
-			request.put( "purchaseTotals_currency", validateRequest.currency ); // Mandatory parameter.
-			request.put( "card_accountNumber", validateRequest.cardAccountNumber ); // Mandatory parameter.
-			request.put( "card_expirationMonth", validateRequest.cardExpirationMonth ); // Mandatory parameter.
-			request.put( "card_expirationYear", validateRequest.cardExpirationYear ); // Mandatory parameter.
-			request.put( "card_cardType", validateRequest.cardType ); // Mandatory parameter.
-=======
+
 			request.put( "purchaseTotals_currency", validateRequest.cardModel.currency ); // Mandatory parameter.
 			request.put( "card_accountNumber", validateRequest.cardModel.cardAccountNumber ); // Mandatory parameter.
 			request.put( "card_expirationMonth", validateRequest.cardModel.cardExpirationMonth ); // Mandatory parameter.
 			request.put( "card_expirationYear", validateRequest.cardModel.cardExpirationYear ); // Mandatory parameter.
 			request.put( "card_cardType", validateRequest.cardModel.cardType ); // Mandatory parameter.
->>>>>>> dev
+
 			request.put( "payerAuthValidateService_authenticationTransactionID",validateRequest.authenticationTransactionID ); // Mandatory parameter.
 			// Additional Mandatory Fields
 						request.put( "payerAuthEnrollService_MCC", 
