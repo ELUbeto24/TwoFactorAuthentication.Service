@@ -5,12 +5,10 @@ public class ValidateAuthenticationRequestModel {
 	public String merchantID;
 	public String merchantReferenceCode;
 	
+	public CardModel cardModel;
 	public String unitPrice;
-	public String currency;
-	public String cardExpirationMonth;
-	public String cardExpirationYear;
-	public String cardAccountNumber;
-	public String cardType;
+	
 	public String authenticationTransactionID;
 	
+	public AdditionalParameterModel additionalParameterModel;
 }

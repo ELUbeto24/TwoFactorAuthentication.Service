@@ -50,8 +50,8 @@ public class ValidateServiceImpl implements IValidateService{
 		if(utilities.validateRequiredParams(validateRequest, 3)) {
 			
 			// card type evaluation
-			validateRequest.cardType =
-					utilities.evaluateCardType(validateRequest.cardAccountNumber);
+			validateRequest.cardModel.cardType =
+					utilities.evaluateCardType(validateRequest.cardModel.cardAccountNumber);
 			
 			// The Validate method of cybersource is invoked to validate the user's token.
 			response = cybersource.Validate(validateRequest);

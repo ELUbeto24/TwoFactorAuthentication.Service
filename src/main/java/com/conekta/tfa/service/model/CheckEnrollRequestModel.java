@@ -15,11 +15,9 @@ public class CheckEnrollRequestModel {
 	public String email;
 	public String phoneNumber;
 	
-	public String cardAccountNumber;
-	public String cardExpirationMonth;
-	public String cardExpirationYear;
-	public String totalsCurrency;
+	public CardModel cardModel;
 	public String price;
 	public String giftCategory;
-	public String cardType;
+	
+	public AdditionalParameterModel additionalParameterModel;
 }
