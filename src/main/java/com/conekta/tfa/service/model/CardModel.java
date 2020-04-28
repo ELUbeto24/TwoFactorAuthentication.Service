@@ -5,4 +5,5 @@ public class CardModel {
 	public String cardExpirationMonth;
 	public String cardExpirationYear;
 	public String cardType;
+	public String currency;
 }
