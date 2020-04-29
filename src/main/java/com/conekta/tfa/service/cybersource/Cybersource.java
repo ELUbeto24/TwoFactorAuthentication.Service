@@ -138,6 +138,7 @@ public class Cybersource {
 			request.put( "item_0_giftCategory", checkEnrollRequest.giftCategory ); // Mandatory parameter.
 			
 			// Additional Mandatory Fields
+			/*
 			request.put( "payerAuthEnrollService_MCC", 
 					checkEnrollRequest.additionalParameterModel.serviceMcc ); // Mandatory parameter.
 			request.put( "payerAuthEnrollService_acquirerBin", 
@@ -160,6 +161,7 @@ public class Cybersource {
 					checkEnrollRequest.additionalParameterModel.serviceMobilePhone ); // Mandatory parameter.
 			request.put( "payerAuthEnrollService_productCode", 
 					checkEnrollRequest.additionalParameterModel.serviceProductCode ); // Mandatory parameter.
+			*/
 			
 			// The request is issued to cybersource by passing Map request and required properties.
 			Map<?, ?> responseCybersource = Client.runTransaction(request, propertySettings.readProperties());
@@ -205,6 +207,7 @@ public class Cybersource {
 			request.put( "payerAuthValidateService_authenticationTransactionID",validateRequest.authenticationTransactionID ); // Mandatory parameter.
 			
 			// Additional Mandatory Fields
+			/*
 			request.put( "payerAuthEnrollService_MCC", 
 					validateRequest.additionalParameterModel.serviceMcc ); // Mandatory parameter.
 			request.put( "payerAuthEnrollService_acquirerBin", 
@@ -227,7 +230,8 @@ public class Cybersource {
 					validateRequest.additionalParameterModel.serviceMobilePhone ); // Mandatory parameter.
 			request.put( "payerAuthEnrollService_productCode", 
 					validateRequest.additionalParameterModel.serviceProductCode ); // Mandatory parameter.
-						
+			*/
+			
 			// The request is issued to cybersource by passing Map request and required properties.
 			Map<?, ?> responseValidate  = Client.runTransaction(request, propertySettings.readProperties());
 			
