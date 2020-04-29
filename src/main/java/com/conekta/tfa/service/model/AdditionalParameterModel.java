@@ -12,4 +12,5 @@ public class AdditionalParameterModel {
 	public String serviceRequestorName;
 	public String serviceMobilePhone;
 	public String serviceProductCode;
+	public String overridePaymentMethod;
 }
