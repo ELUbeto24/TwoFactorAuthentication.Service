@@ -1,8 +1,4 @@
 -------------------------------------------------------------------------------
 Test set: com.conekta.tfa.service.ApplicationTests
 -------------------------------------------------------------------------------
-<<<<<<< HEAD
-Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 22.123 s - in com.conekta.tfa.service.ApplicationTests
-=======
-Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 18.782 s - in com.conekta.tfa.service.ApplicationTests
->>>>>>> feature/Additional-Mandatory-Fields
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 15.671 s - in com.conekta.tfa.service.ApplicationTests
