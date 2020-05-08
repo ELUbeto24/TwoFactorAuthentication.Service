@@ -10,7 +10,7 @@ LABEL "description"="Description Comprehensive fraud management service in addit
 
 ENV JAVA_OPTS="$JAVA_OPTS -javaagent:./newrelic/newrelic.jar"
 
-ENV NEW_RELIC_APP_NAME = "TFA_SERVICE"
+ENV NEW_RELIC_APP_NAME = "TFA Service (Development)"
 
 COPY "./target/TwoFactorAuthentication.Service-0.0.1-SNAPSHOT.jar" "2fa-service.jar"
 COPY ./tfa.properties .
