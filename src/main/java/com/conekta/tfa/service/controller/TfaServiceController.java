@@ -20,7 +20,7 @@ import com.conekta.tfa.service.service.IValidateService;
 
 @RestController
 @CrossOrigin(origins = "*")
-@RequestMapping("/V1/tfaservice")
+@RequestMapping("/V1/TwoFactorAuthenticateService")
 public class TfaServiceController {
 
 	@Autowired

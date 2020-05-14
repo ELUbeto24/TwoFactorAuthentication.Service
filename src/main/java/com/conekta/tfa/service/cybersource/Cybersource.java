@@ -57,8 +57,6 @@ public class Cybersource {
 		String requestJwt = null;
 		
 		try {
-			NewRelic.noticeError("Create JWT");
-			
 			// Extract the keys that are in the configuration and are assigned to the variables.
 			String apiKey = propertySettings.getProperty("apiKey"); // Mandatory parameter.
 		    String apiIdentifier = propertySettings.getProperty("apiIdentifier"); // Mandatory parameter.
