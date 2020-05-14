@@ -13,6 +13,7 @@ import com.conekta.tfa.service.model.Response;
 import com.conekta.tfa.service.model.ValidateAuthenticationRequestModel;
 import com.conekta.tfa.service.utility.Utilities;
 import com.cybersource.ws.client.*;
+import com.newrelic.api.agent.NewRelic;
 
 import io.jsonwebtoken.JwtBuilder;
 import io.jsonwebtoken.Jwts;
@@ -56,6 +57,7 @@ public class Cybersource {
 		String requestJwt = null;
 		
 		try {
+			NewRelic.noticeError("Create JWT");
 			
 			// Extract the keys that are in the configuration and are assigned to the variables.
 			String apiKey = propertySettings.getProperty("apiKey"); // Mandatory parameter.
@@ -95,8 +97,8 @@ public class Cybersource {
 		    requestJwt = builder.compact();
 		    
 		}catch(Exception e) {
-			// TODO: handle exception
-			requestJwt = "Ocurrio un error al intentar generar token";
+			requestJwt = null;
+			NewRelic.noticeError("Exception in createJWT: " + e.getMessage());
 		}
 		
 	    return requestJwt;
@@ -178,6 +180,8 @@ public class Cybersource {
 			response.codeStatus = -600;
 			response.message = e.getLocalizedMessage();
 			response.objectResponse = null;
+			
+			NewRelic.noticeError("Exception in CheckEnroll: " + e.getMessage());
 		}
 		
 		return response;
@@ -217,9 +221,11 @@ public class Cybersource {
 			
 		} catch (Exception e) {
 			// TODO: handle exception
-			response.codeStatus = -600;
+			response.codeStatus = -700;
 			response.message = e.getLocalizedMessage();
 			response.objectResponse = null;
+			
+			NewRelic.noticeError("Exception in Validate: " + e.getMessage());
 		}
 		
 		return response;

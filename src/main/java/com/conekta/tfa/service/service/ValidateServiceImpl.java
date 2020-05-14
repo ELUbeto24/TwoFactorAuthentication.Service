@@ -9,6 +9,7 @@ import com.conekta.tfa.service.model.ValidateAuthenticationRequestModel;
 import com.conekta.tfa.service.model.ValidateResponseModel;
 import com.conekta.tfa.service.repository.IValidateRespository;
 import com.conekta.tfa.service.utility.Utilities;
+import com.newrelic.api.agent.NewRelic;
 
 /**
 * <h1>Validate Service Class</h1>
@@ -65,14 +66,15 @@ public class ValidateServiceImpl implements IValidateService{
 					
 				} catch (Exception e) {
 					// TODO: handle exception
-					response.codeStatus = -600;
+					response.codeStatus = -800;
 					response.message = e.getMessage();
-					
+					NewRelic.noticeError("Exception in validateRepository Save: " + e.getMessage());
 				}
 			}
 		} else {
 			response.codeStatus = -500;
 			response.message = "Parameters are missing";
+			NewRelic.noticeError("Parameters are missing in processValidate");
 		}
 		
 		return response;

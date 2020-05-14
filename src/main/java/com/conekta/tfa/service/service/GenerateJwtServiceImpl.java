@@ -6,6 +6,7 @@ import org.springframework.stereotype.Service;
 import com.conekta.tfa.service.cybersource.Cybersource;
 import com.conekta.tfa.service.model.OrderModel;
 import com.conekta.tfa.service.utility.Utilities;
+import com.newrelic.api.agent.NewRelic;
 
 /**
 * <h1>Generate JWT Service Class</h1>
@@ -43,6 +44,7 @@ public class GenerateJwtServiceImpl implements IGenerateJwtService{
 			responseJwt = cybersource.createJWT(order);
 		}else {
 			responseJwt = "Parameters are missing";
+			NewRelic.noticeError("Parameters are missing in createJwt");
 		}
 		
 		return responseJwt;

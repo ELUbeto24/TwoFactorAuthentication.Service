@@ -9,6 +9,7 @@ import com.conekta.tfa.service.model.CheckEnrollResponseModel;
 import com.conekta.tfa.service.model.Response;
 import com.conekta.tfa.service.repository.ICheckEnrollRepository;
 import com.conekta.tfa.service.utility.Utilities;
+import com.newrelic.api.agent.NewRelic;
 
 /**
 * <h1>CheckEnroll Service Class</h1>
@@ -63,13 +64,17 @@ public class CheckEnrollServiceImpl implements ICheckEnrollService {
 					checkEnrollRepository.save( (CheckEnrollResponseModel) response.objectResponse);	
 				} catch (Exception e) {
 					// TODO: handle exception
-					response.codeStatus = -600;
+					response.codeStatus = -800;
 					response.message = e.getMessage();
+					
+					NewRelic.noticeError("Exception in checkEnrollRepository: " + e.getMessage());
 				}
 			}
 		}else {
 			response.codeStatus = -500;
 			response.message = "Parameters are missing";
+			
+			NewRelic.noticeError("Parameters are missing in checkEnrollRepository");
 		}
 		
 		return response;
