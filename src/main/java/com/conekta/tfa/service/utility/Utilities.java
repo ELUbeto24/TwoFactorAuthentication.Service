@@ -273,18 +273,6 @@ public class Utilities {
 			log.info("payerAuthValidateServiceRun" + validateRequest.cardModel.cardType);
 			log.info("authenticationTransactionID" + validateRequest.authenticationTransactionID);
 			
-			log.info("-- Additional Parameter --");
-			log.info("serviceMcc" + validateRequest.additionalParameterModel.serviceMcc);
-			log.info("serviceAcquirerBin" + validateRequest.additionalParameterModel.serviceAcquirerBin);
-			log.info("serviceLoginID" + validateRequest.additionalParameterModel.serviceLoginID);
-			log.info("serviceCountryCode" + validateRequest.additionalParameterModel.serviceCountryCode);
-			log.info("serviceMerchantName" + validateRequest.additionalParameterModel.serviceMerchantName);
-			log.info("serviceMerchantID" + validateRequest.additionalParameterModel.serviceMerchantID);
-			log.info("serviceMerchantURL" + validateRequest.additionalParameterModel.serviceMerchantURL);
-			log.info("serviceRequestorID" + validateRequest.additionalParameterModel.serviceRequestorID);
-			log.info("serviceRequestorName" + validateRequest.additionalParameterModel.serviceRequestorName);
-			log.info("serviceMobilePhone" + validateRequest.additionalParameterModel.serviceMobilePhone);
-			log.info("serviceProductCode" + validateRequest.additionalParameterModel.serviceProductCode);
 		}
 	}
 }

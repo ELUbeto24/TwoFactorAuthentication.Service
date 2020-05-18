@@ -10,12 +10,12 @@ LABEL "description"="Description Comprehensive fraud management service in addit
 
 ENV JAVA_OPTS="$JAVA_OPTS -javaagent:./newrelic/newrelic.jar"
 
-ENV NEW_RELIC_APP_NAME = "TFA_SERVICE"
+ENV NEW_RELIC_APP_NAME = "TFA Service (Production)"
 
-COPY "./target/TwoFactorAuthentication.Service-0.0.1-SNAPSHOT.jar" "2fa-service.jar"
+COPY "./target/TwoFactorAuthentication.Service-0.0.1-SNAPSHOT.jar" "two-factor-authenticate-service.jar"
 COPY ./tfa.properties .
 COPY ./conekta_7376961.p12 .
 
 EXPOSE 9595
 
-ENTRYPOINT ["java","-jar","2fa-service.jar"]
+ENTRYPOINT ["java","-jar","two-factor-authenticate-service.jar"]

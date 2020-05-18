@@ -29,7 +29,7 @@ common: &default_settings
   # app_name: My Application;My Application 2
   # This setting is required. Up to 3 different application names can be specified.
   # The first application name must be unique.
-  app_name: TFA Service (Production)
+  app_name: Two Factor Authenticate Service (Production)
 
   # To enable high security, set this property to true. When in high
   # security mode, the agent will use SSL and obfuscated SQL. Additionally,
@@ -289,12 +289,12 @@ common: &default_settings
 # provide configuration settings for these environments here.
 Development:
   <<: *default_settings
-  app_name: TFA Service (Development)
+  app_name: Two Factor Authenticate Service (Development)
 
 Staging:
   <<: *default_settings
-  app_name: TFA Service (Staging)
+  app_name: Two Factor Authenticate Service (Staging)
 
 Production:
   <<: *default_settings
-  app_name: TFA Service (Production)
+  app_name: Two Factor Authenticate Service (Production)

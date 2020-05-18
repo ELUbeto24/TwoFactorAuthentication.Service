@@ -9,6 +9,4 @@ public class ValidateAuthenticationRequestModel {
 	public String unitPrice;
 	
 	public String authenticationTransactionID;
-	
-	public AdditionalParameterModel additionalParameterModel;
 }
