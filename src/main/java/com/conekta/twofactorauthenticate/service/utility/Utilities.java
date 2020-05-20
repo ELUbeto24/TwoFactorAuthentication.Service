@@ -98,23 +98,28 @@ public class Utilities {
 		return validateResponse;
 	}
 	
-	public Object authorizationProcess(Object responseCybersource, String resonCode) {
+	public Object authorizationProcess(Object responseCybersource, String resonCode, Integer typeTransaction) {
 		 Object authorizationObject = new Object();
-		if (resonCode == "475") {
-			RejectResponse rejectResponse = new RejectResponse();
-			
-			CheckEnrollResponseModel checkEnrollResponse = new CheckEnrollResponseModel();
-			checkEnrollResponse = (CheckEnrollResponseModel)responseCybersource;
-			
-			rejectResponse.reasonCode = checkEnrollResponse.reasonCode;
-			rejectResponse.acsURL = checkEnrollResponse.acsURL;
-			rejectResponse.paReq = checkEnrollResponse.paReq;
-			rejectResponse.authenticationTransactionId = checkEnrollResponse.authenticationTransactionId;
-			
-			authorizationObject = rejectResponse;
+		 if (typeTransaction == 1) {
+			 if (resonCode == "475") {
+				RejectResponse rejectResponse = new RejectResponse();
+					
+				CheckEnrollResponseModel checkEnrollResponse = new CheckEnrollResponseModel();
+				checkEnrollResponse = (CheckEnrollResponseModel)responseCybersource;
+					
+				rejectResponse.reasonCode = checkEnrollResponse.reasonCode;
+				rejectResponse.acsURL = checkEnrollResponse.acsURL;
+				rejectResponse.paReq = checkEnrollResponse.paReq;
+				rejectResponse.authenticationTransactionId = checkEnrollResponse.authenticationTransactionId;
+					
+				authorizationObject = rejectResponse;
+			}else {
+					
+			}
 		}else {
 			
 		}
+		
 		
 		return authorizationObject;
 	}
