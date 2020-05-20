@@ -7,7 +7,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 // Indicamos en que contexto existira la anotacion
 @Retention(RetentionPolicy.RUNTIME)
-@SpringBootApplication (scanBasePackages = {"com.conekta.tfa.service"})
+@SpringBootApplication (scanBasePackages = {"com.conekta.twofactorauthenticate.service"})
 public @interface CybersourceAnnotation {
 
 }

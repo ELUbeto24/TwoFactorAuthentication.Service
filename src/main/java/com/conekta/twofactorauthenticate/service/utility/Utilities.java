@@ -6,13 +6,7 @@ import java.util.UUID;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import com.conekta.twofactorauthenticate.service.TwoFactorAuthenticationServiceApplication;
-import com.conekta.twofactorauthenticate.service.model.CheckEnrollRequestModel;
-import com.conekta.twofactorauthenticate.service.model.CheckEnrollResponseModel;
-import com.conekta.twofactorauthenticate.service.model.OrderDetailsModel;
-import com.conekta.twofactorauthenticate.service.model.RejectResponse;
-import com.conekta.twofactorauthenticate.service.model.ValidateAuthenticationRequestModel;
-import com.conekta.twofactorauthenticate.service.model.ValidateResponseModel;
+import com.conekta.twofactorauthenticate.service.TwoFactorAuthenticationServiceApplication; 
 
 /**
 * <h1>Utilities Class</h1>

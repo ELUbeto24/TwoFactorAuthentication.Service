@@ -7,10 +7,6 @@ import java.util.UUID;
 import org.springframework.beans.factory.annotation.Autowired;
 
 import com.conekta.twofactorauthenticate.service.configuration.PropertySettings;
-import com.conekta.twofactorauthenticate.service.model.CheckEnrollRequestModel;
-import com.conekta.twofactorauthenticate.service.model.OrderModel;
-import com.conekta.twofactorauthenticate.service.model.Response;
-import com.conekta.twofactorauthenticate.service.model.ValidateAuthenticationRequestModel;
 import com.conekta.twofactorauthenticate.service.utility.Utilities;
 import com.cybersource.ws.client.*;
 
