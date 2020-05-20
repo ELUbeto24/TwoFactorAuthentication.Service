@@ -41,8 +41,8 @@ Package:
         
 #Docker
 
-        - docker build -t "2fa-service" . 
+        - docker build -t "twofactorauthenticate-service" . 
 
-        - docker run --name 2fa-service-docker -p 9595:9000 -e AWS_ACCESS_KEY_ID=xxx -e AWS_SECRET_ACCESS_KEY=xxx 2fa-service:latest
+        - docker run --name twofactorauthenticate-service-docker -p 9595:9000 -e AWS_ACCESS_KEY_ID=xxx -e AWS_SECRET_ACCESS_KEY=xxx twofactorauthenticate-service:latest
 
 
