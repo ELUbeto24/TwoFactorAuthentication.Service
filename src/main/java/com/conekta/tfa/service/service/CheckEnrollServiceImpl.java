@@ -9,6 +9,7 @@ import com.conekta.tfa.service.model.CheckEnrollResponseModel;
 import com.conekta.tfa.service.model.Response;
 import com.conekta.tfa.service.repository.ICheckEnrollRepository;
 import com.conekta.tfa.service.utility.Utilities;
+import com.newrelic.api.agent.NewRelic;
 
 /**
 * <h1>CheckEnroll Service Class</h1>
@@ -61,10 +62,13 @@ public class CheckEnrollServiceImpl implements ICheckEnrollService {
 			if (response.codeStatus == 200) {
 				try {
 					checkEnrollRepository.save( (CheckEnrollResponseModel) response.objectResponse);	
+					response.objectResponse = utilities.authorizationProcess(response.objectResponse, 1);
 				} catch (Exception e) {
 					// TODO: handle exception
 					response.codeStatus = -600;
 					response.message = e.getMessage();
+					
+					NewRelic.noticeError("Exception in processCheckEnroll: " + e.getMessage());
 				}
 			}
 		}else {

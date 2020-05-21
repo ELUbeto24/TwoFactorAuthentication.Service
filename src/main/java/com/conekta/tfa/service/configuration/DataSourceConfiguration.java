@@ -22,6 +22,7 @@ import com.amazonaws.services.secretsmanager.model.GetSecretValueResult;
 import com.amazonaws.services.secretsmanager.model.InvalidParameterException;
 import com.amazonaws.services.secretsmanager.model.InvalidRequestException;
 import com.amazonaws.services.secretsmanager.model.ResourceNotFoundException;
+import com.newrelic.api.agent.NewRelic;
 
 @Configuration
 public class DataSourceConfiguration {
@@ -62,10 +63,13 @@ public class DataSourceConfiguration {
 
 		} catch(ResourceNotFoundException e) {
 			// log.error("The requested secret " + secretName + " was not found");
+			NewRelic.noticeError("ResourceNotFoundException in appDataSource: " + e.getMessage());
 		} catch (InvalidRequestException e) {
 			// log.error("The request was invalid due to: " + e.getMessage());
+			NewRelic.noticeError("InvalidRequestException in appDataSource: " + e.getMessage());
 		} catch (InvalidParameterException e) {
 			// log.error("The request had invalid params: " + e.getMessage());
+			NewRelic.noticeError("InvalidParameterException in appDataSource: " + e.getMessage());
 		}
 
 		if(getSecretValueResponse == null) {
@@ -100,6 +104,7 @@ public class DataSourceConfiguration {
 			} catch (JSONException e) {
 				// TODO Auto-generated catch block
 				e.printStackTrace();
+				NewRelic.noticeError("JSONException in appDataSource: " + e.getMessage());
 			}
 			
         return appDataSourceProperties().initializeDataSourceBuilder().build();

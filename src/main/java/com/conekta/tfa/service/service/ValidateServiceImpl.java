@@ -9,6 +9,7 @@ import com.conekta.tfa.service.model.ValidateAuthenticationRequestModel;
 import com.conekta.tfa.service.model.ValidateResponseModel;
 import com.conekta.tfa.service.repository.IValidateRespository;
 import com.conekta.tfa.service.utility.Utilities;
+import com.newrelic.api.agent.NewRelic;
 
 /**
 * <h1>Validate Service Class</h1>
@@ -63,11 +64,14 @@ public class ValidateServiceImpl implements IValidateService{
 					// The save event is invoked to store the validate response.
 					validateRepository.save((ValidateResponseModel) response.objectResponse);
 					
+					response.objectResponse = utilities.authorizationProcess(response.objectResponse, 2);
+					
 				} catch (Exception e) {
 					// TODO: handle exception
 					response.codeStatus = -600;
 					response.message = e.getMessage();
 					
+					NewRelic.noticeError("Exception in processValidate: " + e.getMessage());
 				}
 			}
 		} else {

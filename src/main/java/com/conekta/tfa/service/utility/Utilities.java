@@ -7,12 +7,13 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import com.conekta.tfa.service.TwoFactorAuthenticationServiceApplication;
+import com.conekta.tfa.service.model.AuthorizationResponseModel;
 import com.conekta.tfa.service.model.CheckEnrollRequestModel;
 import com.conekta.tfa.service.model.CheckEnrollResponseModel;
 import com.conekta.tfa.service.model.OrderDetailsModel;
 import com.conekta.tfa.service.model.RejectResponse;
 import com.conekta.tfa.service.model.ValidateAuthenticationRequestModel;
-import com.conekta.tfa.service.model.ValidateResponseModel; 
+import com.conekta.tfa.service.model.ValidateResponseModel;
 
 /**
 * <h1>Utilities Class</h1>
@@ -98,29 +99,73 @@ public class Utilities {
 		return validateResponse;
 	}
 	
-	public Object authorizationProcess(Object responseCybersource, String resonCode, Integer typeTransaction) {
+	/** Convert the response from cybersource to Authorization Response Model.
+	 * @param Object responseCybersource.
+	 * @param Int typeTransaction.
+	 * @return return RejectResponse.
+	 */
+	public Object authorizationProcess(Object responseCybersource, Integer typeTransaction) {
 		 Object authorizationObject = new Object();
-		 if (typeTransaction == 1) {
-			 if (resonCode == "475") {
-				RejectResponse rejectResponse = new RejectResponse();
+		 
+		 RejectResponse rejectResponse = new RejectResponse();
+		 AuthorizationResponseModel authorizationResponse = new AuthorizationResponseModel();
+		 
+		 switch (typeTransaction) {
+			case 1:
+				
+				 CheckEnrollResponseModel checkEnrollResponse = new CheckEnrollResponseModel();
+				 checkEnrollResponse = (CheckEnrollResponseModel)responseCybersource;
+				 
+				 if (Integer.parseInt(checkEnrollResponse.reasonCode) == 475) {
+					 
+					rejectResponse.reasonCode = checkEnrollResponse.reasonCode;
+					rejectResponse.acsURL = checkEnrollResponse.acsURL;
+					rejectResponse.paReq = checkEnrollResponse.paReq;
+					rejectResponse.authenticationTransactionId = checkEnrollResponse.authenticationTransactionId;
+						
+					authorizationObject = rejectResponse;
+				}else {
 					
-				CheckEnrollResponseModel checkEnrollResponse = new CheckEnrollResponseModel();
-				checkEnrollResponse = (CheckEnrollResponseModel)responseCybersource;
+					authorizationResponse.reasonCode = checkEnrollResponse.reasonCode;
 					
-				rejectResponse.reasonCode = checkEnrollResponse.reasonCode;
-				rejectResponse.acsURL = checkEnrollResponse.acsURL;
-				rejectResponse.paReq = checkEnrollResponse.paReq;
-				rejectResponse.authenticationTransactionId = checkEnrollResponse.authenticationTransactionId;
-					
-				authorizationObject = rejectResponse;
-			}else {
-					
-			}
-		}else {
-			
-		}
-		
-		
+					if (checkEnrollResponse.cavv != "" && checkEnrollResponse.cavv != null) {
+						authorizationResponse.cavv = checkEnrollResponse.cavv;
+					}else {
+						authorizationResponse.cavv = checkEnrollResponse.avv;
+					}
+					authorizationResponse.eci = checkEnrollResponse.eci;
+					authorizationResponse.xID = checkEnrollResponse.xID;
+					authorizationResponse.veresEnrolled = checkEnrollResponse.veresEnrolled;
+					authorizationResponse.specificationVersion = checkEnrollResponse.specificationVersion;
+							
+					authorizationObject = authorizationResponse;
+				}
+				break;
+			case 2:
+				
+				ValidateResponseModel validateResponse = new ValidateResponseModel();
+				validateResponse = (ValidateResponseModel)responseCybersource;
+				
+				authorizationResponse.reasonCode = validateResponse.reasonCode;
+				
+				if (validateResponse.cavv != "" && validateResponse.cavv != null) {
+					authorizationResponse.cavv = validateResponse.cavv;
+				}else {
+					authorizationResponse.cavv = validateResponse.avv;
+				}
+				
+				authorizationResponse.eci = validateResponse.eciRaw;
+				authorizationResponse.xID = validateResponse.xID;
+				authorizationResponse.veresEnrolled = validateResponse.paresStatus;
+				authorizationResponse.specificationVersion = validateResponse.specificationVersion;
+				
+				authorizationObject = authorizationResponse;
+				
+				break;
+			default:
+				break;
+		 }
+		 
 		return authorizationObject;
 	}
 	

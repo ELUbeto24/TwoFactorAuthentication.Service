@@ -7,6 +7,8 @@ import java.util.Properties;
 
 import org.springframework.context.annotation.Configuration;
 
+import com.newrelic.api.agent.NewRelic;
+
 /**
 * <h1>Property Settings Class</h1>
 * This class is in charge of extracting 
@@ -37,9 +39,11 @@ public class PropertySettings {
 		} catch (FileNotFoundException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
+			NewRelic.noticeError("FileNotFoundException in readProperties: " + e.getMessage());
 		} catch (IOException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
+			NewRelic.noticeError("IOException in readProperties: " + e.getMessage());
 		}
        
 		return properties;
@@ -63,9 +67,11 @@ public class PropertySettings {
 		} catch (FileNotFoundException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
+			NewRelic.noticeError("FileNotFoundException in getProperty: " + e.getMessage());
 		} catch (IOException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
+			NewRelic.noticeError("IOException in getProperty: " + e.getMessage());
 		}
 		
 		return responseKey;
